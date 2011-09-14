@@ -1,0 +1,178 @@
+/**
+ * This CSS is ugly and unorganized. It's grown organically.
+ * Since v2 is upcoming, I won't bother to fix it.
+ */
+
+
+@font-face {
+ font-family: "Qlassik Medium";
+ src: url(Qlassik_TB.otf) format("opentype");
+}
+
+h1, h2, #branding a {
+   font-family: "Qlassik Medium", "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+/* Default content h1's to 180%. */
+#center h1 {
+  font-size: 180%;
+}
+
+/* Increase size of branding; add subtle shadow. */
+#branding span, #branding span {
+  font-weight: bold;
+  font-size: 40px;
+  text-shadow: #1659ac 0px 1px 3px;
+}
+
+/* Tags */
+.terms {
+  margin: 0 0 1em;
+}
+.terms span.terms-name {
+  float: left;
+  font-size: 130%;
+  font-variant: small-caps;
+  margin-right: 1em;
+}
+.terms ul li a {
+  font-size: 110%;
+}
+.terms {
+  float: left;
+}
+
+.content h3,
+.content h4,
+.content h5 {
+  margin: 1.7em 0 .5em;
+}
+h3.clickable_heading:hover,
+h4.clickable_heading:hover,
+h5.clickable_heading:hover {
+  color: #B9C5BC;
+}
+
+
+/* Make the "<node type> published on <date>" fancy! */
+span.submitted {
+  padding-left: 3em;
+  letter-spacing: .1em;
+  display: block; /* spans are not inline elements (can't have margins), so make it a block */
+  margin-bottom: .5em;
+}
+.comment span.submitted {
+  letter-spacing: normal;
+}
+.node {
+  padding: 0 1.5em 1.5em;
+}
+
+pre, code, samp, kbd {
+  background-color: #eeeeee;
+  font-family: Monaco, Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+  font-size: 1em;
+  font-size-adjust:none;
+  font-stretch:normal;
+  font-style:normal;
+  font-variant:normal;
+  font-weight:normal;
+  line-height:normal;
+  white-space: pre-wrap;
+}
+
+pre {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 40px #656565;
+  -webkit-box-shadow: 0 0 40px #656565;
+  box-shadow: 0 0 40px #656565;
+}
+
+blockquote, pre {
+	margin-left: 20px;
+	padding: 0.25em;
+}
+
+.node-unpublished {
+	background-color: transparent;
+	border-left: 3px solid #EB5C09;
+}
+
+dl {
+	margin-left: 20px;
+	width: 500px;
+}
+dt {
+	border-color: #CCCCAA;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	line-height: 140%;
+	margin-bottom: 5px;
+	padding-bottom: 0px;
+	padding-left: 5px;
+	font-style: italic;
+	font-weight: 800;
+}
+
+dd {
+	margin: 0pt 10px 15px 10px;
+	padding: 0 0 0 25px;
+	text-align: justify;
+	background-image: url('images/dd.png');
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+
+/* Content listing. */
+.views-field-type {
+  font-size: 80%;
+}
+.views-field-title {
+  font-size: 95%;
+}
+.fancy-node-type {
+  padding: 0.1em;
+  width: 5.5em;
+  text-align: center;
+  display: block;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 2px solid;
+}
+.fancy-node-type.blog {
+  background: #efe;
+  color: #00A480;
+  border-color: #00A480;
+}
+.fancy-node-type.article {
+  background: #fee;
+  color: #F10026;
+  border-color: #F10026;
+}
+.fancy-node-type.talk {
+  background: #fee;
+  color: #FF9F00;
+  border-color: #FF9F00;
+}
+.fancy-date {
+  font-size: 80%;
+}
+
+/* Links to my profiles on other sites. */
+.profiles {
+  display: inline;
+  padding-left: 0;
+}
+.profiles li {
+  background-image: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 1em;
+  list-style-type: none;
+  display: inline;
+}

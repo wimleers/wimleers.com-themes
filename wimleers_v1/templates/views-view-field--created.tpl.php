@@ -1,0 +1,1 @@
+<span class="fancy-date"><?php print $output ?></span>

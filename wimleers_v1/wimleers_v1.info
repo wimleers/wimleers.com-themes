@@ -1,0 +1,7 @@
+name = wimleers.com v1
+description = Garland, slightly customized for wimleers.com. Initially for Drupal 5.
+package = wimleers.com
+core = 7.x
+base theme = garland
+stylesheets[all][] = additions.css
+settings[garland_width] = fixed
