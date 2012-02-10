@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale = 1.0, user-scalable=no" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<title>Wim Leers</title>
+	<link href="./css/screen.css" rel="stylesheet" type="text/css" media="screen" />
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body>
+<header class="ofPage">
+	<nav class="c16">
+		<div class="g7 logo">
+			<h1><a href="/">Wim Leers</a></h1>
+			<h2>Software Engineer at Facebook</h2>
+		</div>
+		<ul class="g9">
+			<li class="selected"><a href="#">Blog</a></li>
+			<li><a href="#">Articles</a></li>
+			<li><a href="#">Talks</a></li>
+			<li><a href="#">Work</a></li>
+			<div class="alignRight meta">
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</div>
+		</ul>
+	</nav>
+</header>
+<section class="main c16 cf">
+	<aside class="g7">
+		<p class="breadcrumb"><a href="#">Path</a> / <a href="#">To The</a> / Page</p>
+		<h1>This Post is About</h1>
+		<ul class="tags">
+			<li><a href="#">Deployment</a></li>
+			<li><a href="#">Drupal</a></li>
+			<li><a href="#">Drush</a></li>
+			<li><a href="#">Version&nbsp;Control</a></li>
+			<li><a href="#">Workflow</a></li>
+		</ul>
+		<h1>Some Other Hot Topics</h1>
+		<ul class="topics">
+			<li><a href="#">Facebook</a></li>
+			<li><a href="#">WPO</a></li>
+			<li><a href="#">Drupal</a></li>
+			<li><a href="#">File Conveyor</a></li>
+			<li><a href="#">Master Thesis</a></li>
+		</ul>
+	</aside>
+	<article class="g9">
+		<header>
+			<h1>My (deprecated) answer to the Drupal Deployment&nbsp;question</h1>
+			<p class="meta">published <span>on</span> September 18, 2011</p>
+		</header>
+		<div class="body">
+			<p><a href="#">Jacob Singh</a> did a presentation at <a href="#">DrupalCon London</a> about &ldquo;How to have an open relationship . . . with software (and still make paper)&rdquo;. I&rsquo;m one of the people he interviewed for his presentation.</p>
+			<p>One of the questions he asked, was this one:</p>
+			<blockquote>How do you use version control, spreadsheets, text files, napkins, etc to track your customizations to Drupal modules and core? Until the DOG project is done, what is the best worst practice here? On the Gardens team for instance, we used a PATCHES.txt file which listed the date, author, description and link for every patch to core or contrib. low tech, somewhat functional. How do you do this?</blockquote>
+			<p>He liked my answer so much that he told me I should write a blog post about it &mdash; even if I&rsquo;d just copy my answer verbatim. I&rsquo;d been wanting to do that for years now. &ldquo;Better late than never&rdquo;, right? Although it&rsquo;s actually too late now, because this system was actually designed to work when Drupal&rsquo;s code still lived at http://cvs.drupal.org...</p>
+			<p>So, here is my (old) answer to the Drupal Deployment question. Copied verbatim, only formatting and links have been added.</p>
+			<h2>My deprecated answer</h2>
+			<p>I&rsquo;m still on Drupal 5 and 6, but am very eager to start using dog. I actually waited some time to see it materialize, so that my first Drupal 7 project would actually be in VCS in The Right Way, but since dog still hasn&rsquo;t progress enough to be usable, I&rsquo;m gonna have to go with another approach.</p>
+			<p>I used my own custom system based on svn, that pulled in the original d.o code from CVS. Yes, that means CVS in svn. I hate tarballs. I had a script that did the initial set-up. Summary: svn in CVS, symlinks + svn:externals magic. Basically, you&rsquo;d have a core directory&rdquo; with all of Drupal core in there (checked out from CVS, checked in to svn). The sites and profiles directories are symlinks to respectively ../sites and ../profiles (meaning that these are at the same level as the core directory. This then allows me to use my own installation profile (which comes with all the common stuff).</p>
+			<ul>
+				<li><code>core</code> is actually an <code>svn:externals</code> checkout of my own version of Drupal core (with the CDN module core patch for D5/D6, that added D7&rsquo;s <code>hook_file_url_alter()</code>).</li>
+				<li><code>profiles</code> is actually another svn:externals checkout, this time of my own install profile</li>
+				<li><code>sites</code> contained the custom code</li>
+			</ul>
+			<p>This allowed for maximum code reuse.</p>
+			<p>Unfortunately, with the switch from CVS to git, all of this is now broken. Yay.</p>
+			<p>Patches were applied to my own Drupal core, or my own installation profile when it made sense to apply them to all my Drupal sites. The patch file then lived in a patches directory, with the filenames following a scheme (as described somewhere by webchick, IIRC) that includes the node ID and follow-up ID of where the patch was originally posted on d.o, allowing it to be looked up later, to see if it&rsquo;s already been committed.</p>
+			<p>You can actually check out this code at svn://wimleers.com/drupalbase <a href="#fn-1" class="fnRef">1</a>. And for ease of glancing, I&rsquo;ve included the script to do the initial repository set-up. It includes a better description and something that roughly equates to an ASCII-art visualization of the directory tree.</p>
+			<p>This is also why I wrote the syncvsvn script back in 2008. Yes, this system is so old, but I never got around to do that All-Encompassing Awesome Write-Up. I&rsquo;m still struggling to write (well, publish) anything at all if it&rsquo;s not near perfection.</p>
+			<h2>My current answer</h2>
+			<p>I don&rsquo;t have a full answer yet. I&rsquo;d love to use <code>dog</code>, but that&rsquo;s just not ready yet.</p>
+			<p>The only usable &ldquo;system&rdquo; that exists today <a href="#fn-2" class="fnRef">2</a>, is <code>Drush make</code>.</p>
+			<p>I&rsquo;m currently using <code>drush</code>&rsquo;s <code>drush rsync</code> and <code>drush sql-sync</code> commands with great success. While it doesn&rsquo;t offer the same granularity &mdash; I&rsquo;ve lost the ability to diff between different versions &mdash; it&rsquo;s still awesome. I&rsquo;m able to easily get a clone of the site up and running on my local machine and to sync changes. Although you have to be very careful when doing so, it&rsquo;s now at least easily possible.</p>
+			<footer class="fn">
+				<ol>
+					<li id="fn-1">For now, this remains online, because some sites that I own, such as <a href="#">http://driverpacks.net</a>, are still maintained using this system. I plan to change this to something superior ASAP though. Read: I&rsquo;m waitingfor <code><a href="#">dog</a></code>.</li>
+					<li id="fn-2">To the best of my knowledge. <code><a href="#">Drush Deploy</a></code> is only about actually deploying (sending the code, not the management of the code.</li>
+				</ol>
+			</footer>
+		</div>
+	</article>
+</section>
+<footer class="ofPage">
+	<div class="c16 cf">
+		<div class="g10">
+			<p>
+				<form>
+					<fieldset>
+						<legend>Zoeken</legend>
+						<label for="search">Zoeken in deze website</label>
+						<input type="text" id="search" class="inputText" />
+						<input type="submit" class="inputSubmit" label="Verzenden" />
+					</fieldset>
+				</form>
+			</p>
+			<p>
+				Powered by <a href="http://drupal.org">Drupal</a>.<br />
+				Copyright &copy; 2007&ndash;2011 Wim Leers. All rights reserved.
+			</p>
+		</div>
+		<nav class="g6">
+			<ul>
+				<li><a href="#">LinkedIn</a></li>
+				<li><a href="#">Github</a></li>
+				<li><a href="#">Twitter</a></li>
+				<li><a href="#">Drupal.org</a></li>
+				<li><a href="#">Pinboard</a></li>
+			</ul>
+		</nav>
+	</div>
+</footer>
+</body>
+</html>

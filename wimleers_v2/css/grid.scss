@@ -1,0 +1,156 @@
+/*
+	960 Grid System ~ Core CSS.
+	Learn more ~ http://960.gs/
+
+	Licensed under GPL and MIT.
+*/
+
+/* `Containers
+----------------------------------------------------------------------------------------------------*/
+
+.c16 { margin-left: auto; margin-right: auto; width: 960px; }
+
+/* `Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.g1, .g2, .g3, .g4, .g5, .g6, .g7, .g8, .g9, .g10, .g11, .g12, .g13, .g14, .g15, .g16 { display: inline; float: left; margin-left: 10px; margin-right: 10px; }
+
+.c16 .g4 { width: 220px; }
+
+.c16 .g8 { width: 460px; }
+
+.c16 .g12 { width: 700px; }
+
+.c16 .g16 { width: 940px; }
+
+/* `Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+
+.alpha { margin-left: 0; }
+
+.omega { margin-right: 0; }
+
+/* `Grid >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.c16 .g1 { width: 40px; }
+
+.c16 .g2 { width: 100px; }
+
+.c16 .g3 { width: 160px; }
+
+.c16 .g5 { width: 280px; }
+
+.c16 .g6 { width: 340px; }
+
+.c16 .g7 { width: 400px; }
+
+.c16 .g9 { width: 520px; }
+
+.c16 .g10 { width: 580px; }
+
+.c16 .g11 { width: 640px; }
+
+.c16 .g13 { width: 760px; }
+
+.c16 .g14 { width: 820px; }
+
+.c16 .g15 { width: 880px; }
+
+/* `Prefix Extra Space >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.c16 .pre4 { padding-left: 240px; }
+
+.c16 .pre8 { padding-left: 480px; }
+
+.c16 .pre12 { padding-left: 720px; }
+
+/* `Prefix Extra Space >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.c16 .pre1 { padding-left: 60px; }
+
+.c16 .pre2 { padding-left: 120px; }
+
+.c16 .pre3 { padding-left: 180px; }
+
+.c16 .pre5 { padding-left: 300px; }
+
+.c16 .pre6 { padding-left: 360px; }
+
+.c16 .pre7 { padding-left: 420px; }
+
+.c16 .pre9 { padding-left: 540px; }
+
+.c16 .pre10 { padding-left: 600px; }
+
+.c16 .pre11 { padding-left: 660px; }
+
+.c16 .pre13 { padding-left: 780px; }
+
+.c16 .pre14 { padding-left: 840px; }
+
+.c16 .pre15 { padding-left: 900px; }
+
+/* `Suffix Extra Space >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.c16 .suf4 { padding-right: 240px; }
+
+.c16 .suf8 { padding-right: 480px; }
+
+.c16 .suf12 { padding-right: 720px; }
+
+/* `Suffix Extra Space >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.c16 .suf1 { padding-right: 60px; }
+
+.c16 .suf2 { padding-right: 120px; }
+
+.c16 .suf3 { padding-right: 180px; }
+
+.c16 .suf5 { padding-right: 300px; }
+
+.c16 .suf6 { padding-right: 360px; }
+
+.c16 .suf7 { padding-right: 420px; }
+
+.c16 .suf9 { padding-right: 540px; }
+
+.c16 .suf10 { padding-right: 600px; }
+
+.c16 .suf11 { padding-right: 660px; }
+
+.c16 .suf13 { padding-right: 780px; }
+
+.c16 .suf14 { padding-right: 840px; }
+
+.c16 .suf15 { padding-right: 900px; }
+
+/* `Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* http://nicolasgallagher.com/micro-clearfix-hack */
+
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+
+.cf:after {
+    clear:both;
+}
