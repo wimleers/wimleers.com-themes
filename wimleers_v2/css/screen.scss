@@ -191,7 +191,7 @@ section.main {
 			border-bottom: 1px solid $lightblue;
 		}
 
-			a.fnRef {
+			sup a {
 				background: $lightblue;
 				border: none;
 				color: #fff;
@@ -215,8 +215,8 @@ section.main {
 			border-color: $blue;
 		}
 
-			a.fnRef:hover,
-			a.fnRef:focus {
+			sup a:hover,
+			sup a:focus {
 				background: $blue;
 				color: #fff;
 			}
@@ -228,7 +228,7 @@ section.main {
 			border: 0;
 		}
 
-			a.fnRef:active {
+			sup a:active {
 				background: $red;
 				top: -10px;
 				color: #fff;
