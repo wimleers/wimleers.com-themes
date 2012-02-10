@@ -353,6 +353,23 @@ section.main {
 					color: $red;
 				}
 			}
+
+			&.files .filesize {
+				font: 500 11px/20px Verdana, sans-serif;
+			}
+			&.files .file {
+				a { 
+					text-transform: none;
+					letter-spacing: normal;
+					color: #2385c2
+				}
+
+				a:hover,
+				a:focus {
+					color: #14699e;
+					border-color: #2385c2;
+				}
+			}
 		}
 
 		h1 {
