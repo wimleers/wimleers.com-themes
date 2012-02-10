@@ -420,7 +420,7 @@ section.main {
 
 					// tags: article, post, talk
 					.tag-a,
-					.tag-p,
+					.tag-b,
 					.tag-t {
 						letter-spacing: 1px;
 						font-weight: 700;
@@ -432,7 +432,7 @@ section.main {
 						color: #b0312e;
 					}
 
-					.tag-p {
+					.tag-b {
 						color: #315389;
 					}
 
@@ -441,7 +441,7 @@ section.main {
 					}
 
 					.tag-a:hover,
-					.tag-p:hover,
+					.tag-b:hover,
 					.tag-t:hover {
 						padding: 0 7px;
 						margin-left: -7px;
