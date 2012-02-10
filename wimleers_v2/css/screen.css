@@ -601,6 +601,10 @@ section.main {
   line-height: 28px;
   color: #878787;
   padding-bottom: 42px; }
+.front aside.topics {
+  background: transparent url(../img/l-big.png) no-repeat 100% 0;
+  padding-top: 280px;
+  margin-top: -168px; }
 
 /*
   Writings: add class="writings" to <section> tag
@@ -664,30 +668,26 @@ section.writings .body {
     section.writings .body article a:hover p:after,
     section.writings .body article a:focus p:after {
       background-position: 0 -12px; }
-  section.writings .body aside.topics {
-    background: transparent url(../img/l-big.png) no-repeat 100% 0;
-    padding-top: 280px;
-    margin-top: -168px; }
-    section.writings .body aside.topics h2 {
-      color: #9e9c99;
-      font-size: 26px;
-      line-height: 28px;
-      margin-bottom: 7px; }
-    section.writings .body aside.topics li {
-      margin-bottom: 7px; }
-    section.writings .body aside.topics a {
-      color: #9e9c99;
-      border-color: #d8d5d1;
-      font-weight: 400;
-      text-transform: none;
-      letter-spacing: 0;
-      font-size: 14px; }
-    section.writings .body aside.topics a:hover,
-    section.writings .body aside.topics a:focus {
-      color: #2385c2;
-      border-color: #2385c2; }
-    section.writings .body aside.topics a:active {
-      color: #c24523; }
+  section.writings .body aside.topics h2 {
+    color: #9e9c99;
+    font-size: 26px;
+    line-height: 28px;
+    margin-bottom: 7px; }
+  section.writings .body aside.topics li {
+    margin-bottom: 7px; }
+  section.writings .body aside.topics a {
+    color: #9e9c99;
+    border-color: #d8d5d1;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 14px; }
+  section.writings .body aside.topics a:hover,
+  section.writings .body aside.topics a:focus {
+    color: #2385c2;
+    border-color: #2385c2; }
+  section.writings .body aside.topics a:active {
+    color: #c24523; }
 
 /*
 	Footer

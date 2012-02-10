@@ -390,6 +390,12 @@ section.main {
 		color: #878787;
 		padding-bottom: 42px;
 	}
+
+	aside.topics {
+		background: transparent $biglama no-repeat 100% 0;
+		padding-top: 280px;
+		margin-top: -168px;
+	}
 }
 
 
@@ -493,9 +499,6 @@ section.writings {
 		}
 
 		aside.topics {
-			background: transparent $biglama no-repeat 100% 0;
-			padding-top: 280px;
-			margin-top: -168px;
 
 			h2 {
 				color: #9e9c99;
