@@ -192,7 +192,10 @@ section.main {
 			border-bottom: 1px solid $lightblue;
 		}
 
-			sup a {
+		sup {
+			vertical-align: baseline;
+
+			a {
 				background: $lightblue;
 				border: none;
 				color: #fff;
@@ -201,13 +204,14 @@ section.main {
 				padding: 2px 4px 3px;
 				position: relative;
 				top: -10px;
-	            border-radius: 10px;
+				border-radius: 10px;
 			}
+		}
 
-			code a {
-				color: $red;
-				border-color: $borderred;
-			}
+		code a {
+			color: $red;
+			border-color: $borderred;
+		}
 
 		a:hover,
 		a:focus {

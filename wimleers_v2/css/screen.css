@@ -468,16 +468,18 @@ section.main {
   section.main .body a {
     color: #2385c2;
     border-bottom: 1px solid #93cef4; }
-  section.main .body sup a {
-    background: #93cef4;
-    border: none;
-    color: #fff;
-    display: inline-block;
-    font: 700 9px/10px Verdana, sans-serif;
-    padding: 2px 4px 3px;
-    position: relative;
-    top: -10px;
-    border-radius: 10px; }
+  section.main .body sup {
+    vertical-align: baseline; }
+    section.main .body sup a {
+      background: #93cef4;
+      border: none;
+      color: #fff;
+      display: inline-block;
+      font: 700 9px/10px Verdana, sans-serif;
+      padding: 2px 4px 3px;
+      position: relative;
+      top: -10px;
+      border-radius: 10px; }
   section.main .body code a {
     color: #c24523;
     border-color: #f3a690; }
