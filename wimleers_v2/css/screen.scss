@@ -380,150 +380,155 @@ section.main {
 }
 
 /*
-	Home: add class="home" to <body> tag
+	Front: add class="front" to <body> tag
 */
 
-.home {
-	section.main {
-		.intro {
-			font-size: 18px;
-			line-height: 28px;
-			color: #878787;
-			padding-bottom: 42px;
-		}
+.front {
+	.intro {
+		font-size: 18px;
+		line-height: 28px;
+		color: #878787;
+		padding-bottom: 42px;
+	}
+}
 
-		.body {
-			border-top: 4px solid #ddd;
 
-			article {
-				border-bottom: 1px solid #dad7d3;
-				padding: 21px 0 20px;
+/*
+  Writings: add class="writings" to <section> tag
+ */
 
-				.meta {
-					color: #b8b5b2;
-					padding-top: 7px;
-					text-transform: uppercase;
-					font-size: 13px;
+section.writings {
+	.body {
+		border-top: 4px solid #ddd;
 
-					// day
-					.d {
-						font-weight: 700;
-						font-size: 20px;
-						line-height: 21px;
-					}
+		article {
+			border-bottom: 1px solid #dad7d3;
+			padding: 21px 0 20px;
 
-					// month
-					.m {
-						letter-spacing: 1px;
-						display: block;
-					}
+			.meta {
+				color: #b8b5b2;
+				padding-top: 7px;
+				text-transform: uppercase;
+				font-size: 13px;
 
-					// tags: article, post, talk
-					.tag-a,
-					.tag-b,
-					.tag-t {
-						letter-spacing: 1px;
-						font-weight: 700;
-						font-size: 10px;
-						display: inline-block;
-					}
-
-					.tag-a {
-						color: #b0312e;
-					}
-
-					.tag-b {
-						color: #315389;
-					}
-
-					.tag-t {
-						color: #c98e32;
-					}
-
-					.tag-a:hover,
-					.tag-b:hover,
-					.tag-t:hover {
-						padding: 0 7px;
-						margin-left: -7px;
-						background: #f0ebe4;
-						border-radius: 3px;
-					}
-
+				// day
+				.d {
+					font-weight: 700;
+					font-size: 20px;
+					line-height: 21px;
 				}
 
-				a {
-					border: none;
-
-					h2 {
-						color: #5c5553;
-						font-size: 26px;
-						line-height: 28px;
-						margin-bottom: 14px;
-					}
-
-					p {
-						color: #858381;
-					}
-
-					p:after {
-						content:">";
-						display: inline-block;
-						background: transparent $arrow;
-						height: 12px;
-						width: 12px;
-						overflow: hidden;
-						text-indent: -9999px;
-						margin-left: 7px;
-					}
+				// month
+				.m {
+					letter-spacing: 1px;
+					display: block;
 				}
 
-				a:hover h2,
-				a:hover p,
-				a:focus h2,
-				a:focus p {
-					color: #c24523;
+				// tags: article, post, talk
+				.tag-a,
+				.tag-b,
+				.tag-t {
+					letter-spacing: 1px;
+					font-weight: 700;
+					font-size: 10px;
+					display: inline-block;
 				}
 
-				a:hover p:after,
-				a:focus p:after {
-					background-position: 0 -12px;
+				.tag-a {
+					color: #b0312e;
+				}
+
+				.tag-b {
+					color: #315389;
+				}
+
+				.tag-t {
+					color: #c98e32;
+				}
+
+				.tag-a:hover,
+				.tag-b:hover,
+				.tag-t:hover {
+					padding: 0 7px;
+					margin-left: -7px;
+					background: #f0ebe4;
+					border-radius: 3px;
+				}
+
+			}
+
+			a {
+				border: none;
+
+				h2 {
+					color: #5c5553;
+					font-size: 26px;
+					line-height: 28px;
+					margin-bottom: 14px;
+				}
+
+				p {
+					color: #858381;
+				}
+
+				p:after {
+					content:">";
+					display: inline-block;
+					background: transparent $arrow;
+					height: 12px;
+					width: 12px;
+					overflow: hidden;
+					text-indent: -9999px;
+					margin-left: 7px;
 				}
 			}
 
-			aside.topics {
-				background: transparent $biglama no-repeat 100% 0;
-				padding-top: 280px;
-				margin-top: -168px;
+			a:hover h2,
+			a:hover p,
+			a:focus h2,
+			a:focus p {
+				color: #c24523;
+			}
 
-				h2 {
-					color: #9e9c99;
-					font-size: 26px;
-					line-height: 28px;
-					margin-bottom: 7px;
-				}
+			a:hover p:after,
+			a:focus p:after {
+				background-position: 0 -12px;
+			}
+		}
 
-				li {
-					margin-bottom: 7px;
-				}
+		aside.topics {
+			background: transparent $biglama no-repeat 100% 0;
+			padding-top: 280px;
+			margin-top: -168px;
 
-				a {
-					color: #9e9c99;
-					border-color: #d8d5d1;
-					font-weight: 400;
-					text-transform: none;
-					letter-spacing: 0;
-					font-size: 14px;
-				}
+			h2 {
+				color: #9e9c99;
+				font-size: 26px;
+				line-height: 28px;
+				margin-bottom: 7px;
+			}
 
-				a:hover,
-				a:focus {
-					color: $blue;
-					border-color: $blue;
-				}
+			li {
+				margin-bottom: 7px;
+			}
 
-				a:active {
-					color: $red;
-				}
+			a {
+				color: #9e9c99;
+				border-color: #d8d5d1;
+				font-weight: 400;
+				text-transform: none;
+				letter-spacing: 0;
+				font-size: 14px;
+			}
+
+			a:hover,
+			a:focus {
+				color: $blue;
+				border-color: $blue;
+			}
+
+			a:active {
+				color: $red;
 			}
 		}
 	}
