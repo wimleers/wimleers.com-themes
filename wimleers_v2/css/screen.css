@@ -653,13 +653,9 @@ section.writings .body {
       section.writings .body article a p {
         color: #858381; }
       section.writings .body article a p:after {
-        content: ">";
+        content: "→";
         display: inline-block;
-        background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAYCAYAAADOMhxqAAAAdUlEQVR42qWSwQkAMQgEr4nUdJ2khZRxcNzHZq6ktGAi7HNFljzGjzug6PW9D6NvjPWysAMrBYScShAkKcpImEwKwQVMF/SR9KXr8NHh9Nf478boG2O9LOzASgEhpxIESYoyEiaTQnAB0wV9JH3pOnxyOP01Fge4EWcuOBBjAAAAAElFTkSuQmCC);
-        height: 12px;
-        width: 12px;
         overflow: hidden;
-        text-indent: -9999px;
         margin-left: 7px; }
     section.writings .body article a:hover h2,
     section.writings .body article a:hover p,
