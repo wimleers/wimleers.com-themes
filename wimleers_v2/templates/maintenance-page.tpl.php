@@ -23,41 +23,41 @@
 </head>
 <body class="<?php print $classes; ?>">
   <header id="header" class="ofPage">
-  	<nav class="c16">
-  		<div class="g7 logo">
-  			<h1 id="site-name">
+    <nav class="c16">
+      <div class="g7 logo">
+        <h1 id="site-name">
           <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
         </h1>
-  			<h2 id="site-slogan"><?php print $title; ?></h2>
-  		</div>
-  	</nav>
+        <h2 id="site-slogan"><?php print $title; ?></h2>
+      </div>
+    </nav>
   </header>
   <section class="main c16 cf">
     <div class="body cf">
       <article class="g7 pre2 intro">
         <h2><?php print $title ?></h2>
-    		<?php print $content ?>
-    	</article>
+        <?php print $content ?>
+      </article>
     </div>
   </section>
   <footer class="ofPage">
-  	<div class="c16 cf">
-  		<div class="g10">
-  			<p>
-  				Powered by <a href="http://drupal.org">Drupal</a>.<br />
-  				Copyright &copy; 2007&ndash;2011 Wim Leers. All rights reserved.
-  			</p>
-  		</div>
-  		<nav class="g6">
-  			<ul>
-  				<li><a href="https://twitter.com/wimleers">Twitter</a></li>
-  				<li><a href="http://linkedin.com/in/wimleers">LinkedIn</a></li>
-  				<li><a href="https://github.com/wimleers">Github</a></li>
-  				<li><a href="http://drupal.org/user/99777">Drupal.org</a></li>
-  				<li><a href="http://pinboard.in/u:wimleers/">Pinboard</a></li>
-  			</ul>
-  		</nav>
-  	</div>
+    <div class="c16 cf">
+      <div class="g10">
+        <p>
+          Powered by <a href="http://drupal.org">Drupal</a>.<br />
+          Copyright &copy; 2007&ndash;2011 Wim Leers. All rights reserved.
+        </p>
+      </div>
+      <nav class="g6">
+        <ul>
+          <li><a href="https://twitter.com/wimleers">Twitter</a></li>
+          <li><a href="http://linkedin.com/in/wimleers">LinkedIn</a></li>
+          <li><a href="https://github.com/wimleers">Github</a></li>
+          <li><a href="http://drupal.org/user/99777">Drupal.org</a></li>
+          <li><a href="http://pinboard.in/u:wimleers/">Pinboard</a></li>
+        </ul>
+      </nav>
+    </div>
   </footer>
 </body>
 </html>

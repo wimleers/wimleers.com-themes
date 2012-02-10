@@ -68,18 +68,18 @@
 ?>
 
 <header id="header" class="ofPage">
-	<nav class="c16">
-		<div class="g7 logo">
-			<h1 id="site-name">
+  <nav class="c16">
+    <div class="g7 logo">
+      <h1 id="site-name">
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
       </h1>
-			<h2 id="site-slogan"><?php print $site_slogan; ?></h2>
-		</div>
-		<div class="g9">
-		  <?php print $main_menu; ?>
-		  <?php print $meta_menu; ?>
-		</div>
-	</nav>
+      <h2 id="site-slogan"><?php print $site_slogan; ?></h2>
+    </div>
+    <div class="g9">
+      <?php print $main_menu; ?>
+      <?php print $meta_menu; ?>
+    </div>
+  </nav>
 </header>
 
 <?php if ($is_front || $is_view_page): ?>
@@ -87,13 +87,13 @@
     <?php if ($is_front) : ?>
       <div class="cf">
         <article class="g7 pre2 intro">
-      		<p>Hello! My name is Wim and I'm interested in
-      		<a href="http://en.wikipedia.org/wiki/Web_Performance_Optimization">WPO</a>,
-      		<a href="http://drupal.org">Drupal</a> and data mining. I've worked
-      		on <a href="http://facebook.com/careers">Facebook</a>'s Site Speed
-      		team. And I <em>love</em> llamas.</p>
-      		<p style="color:#C24523">New design: <em>beta</em>! <span style="font-size:80%">(Release early, release often!)</span></p>
-      	</article>
+          <p>Hello! My name is Wim and I'm interested in
+          <a href="http://en.wikipedia.org/wiki/Web_Performance_Optimization">WPO</a>,
+          <a href="http://drupal.org">Drupal</a> and data mining. I've worked
+          on <a href="http://facebook.com/careers">Facebook</a>'s Site Speed
+          team. And I <em>love</em> llamas.</p>
+          <p style="color:#C24523">New design: <em>beta</em>! <span style="font-size:80%">(Release early, release often!)</span></p>
+        </article>
       </div>
       <div class="body">
         <section class="g10">
@@ -139,8 +139,8 @@
     </header>
     <article class="g12">
       <header>
-  		</header>
-  		<?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+      </header>
+      <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
       <?php print render($page['help']); ?>
       <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
       <?php print render($page['content']); ?>
@@ -153,22 +153,22 @@
 
 
   <section class="main c16 cf">
-  	<aside class="g7">
-  	  <?php print $messages; ?>
-  	  <!--
-  		<p class="breadcrumb"><?php print $breadcrumb; ?></p>
-  		-->
-  		<?php if ($tags): ?>
-    	  <h1>This <?php print $node_type; ?> is about</h1>
-    	  <?php print render($tags); ?>
-    	<?php endif; ?>
-    	<?php if ($downloads): ?>
-    	  <h1>Downloads</h1>
-    	  <?php print render($downloads); ?>
-    	<?php endif; ?>
-  		<h1>Hot topics</h1>
-  		<?php print $hot_topics_menu; ?>
-		</aside>
+    <aside class="g7">
+      <?php print $messages; ?>
+      <!--
+      <p class="breadcrumb"><?php print $breadcrumb; ?></p>
+      -->
+      <?php if ($tags): ?>
+        <h1>This <?php print $node_type; ?> is about</h1>
+        <?php print render($tags); ?>
+      <?php endif; ?>
+      <?php if ($downloads): ?>
+        <h1>Downloads</h1>
+        <?php print render($downloads); ?>
+      <?php endif; ?>
+      <h1>Hot topics</h1>
+      <?php print $hot_topics_menu; ?>
+    </aside>
 
     <?php if ($node): ?>
       <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
@@ -181,8 +181,8 @@
           <?php print render($title_prefix); ?>
           <?php if ($title): ?><h1><?php print $title; ?></h1><?php endif; ?>
           <?php print render($title_suffix); ?>
-    		</header>
-    		<?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+        </header>
+        <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
         <?php print render($page['help']); ?>
         <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
         <?php print render($page['content']); ?>
@@ -192,24 +192,24 @@
 <?php endif; ?>
 
 <footer class="ofPage">
-	<div class="c16 cf">
-		<div class="g10">
-		  <?php print render($builtin_search); ?>
-			<p>
-				Logo: <a href="http://inespee.com">Ine Spee</a>.
-				Design: <a href="http://xavierbertels.com">Xavier Bertels</a>.
-				Made in <a href="http://en.wikipedia.org/wiki/Hasselt">Hasselt</a>.<br />
-				Copyright 2007&ndash;2011 <a href="http://wimleers.com">Wim Leers</a>. All rights reserved.
-			</p>
-		</div>
-		<nav class="g6">
-			<ul>
-				<li><a href="https://twitter.com/wimleers" rel="me">Twitter</a></li>
-				<li><a href="http://linkedin.com/in/wimleers" rel="me">LinkedIn</a></li>
-				<li><a href="https://github.com/wimleers" rel="me">Github</a></li>
-				<li><a href="http://drupal.org/user/99777" rel="me">Drupal.org</a></li>
-				<li><a href="http://pinboard.in/u:wimleers/" rel="me">Pinboard</a></li>
-			</ul>
-		</nav>
-	</div>
+  <div class="c16 cf">
+    <div class="g10">
+      <?php print render($builtin_search); ?>
+      <p>
+        Logo: <a href="http://inespee.com">Ine Spee</a>.
+        Design: <a href="http://xavierbertels.com">Xavier Bertels</a>.
+        Made in <a href="http://en.wikipedia.org/wiki/Hasselt">Hasselt</a>.<br />
+        Copyright 2007&ndash;2011 <a href="http://wimleers.com">Wim Leers</a>. All rights reserved.
+      </p>
+    </div>
+    <nav class="g6">
+      <ul>
+        <li><a href="https://twitter.com/wimleers" rel="me">Twitter</a></li>
+        <li><a href="http://linkedin.com/in/wimleers" rel="me">LinkedIn</a></li>
+        <li><a href="https://github.com/wimleers" rel="me">Github</a></li>
+        <li><a href="http://drupal.org/user/99777" rel="me">Drupal.org</a></li>
+        <li><a href="http://pinboard.in/u:wimleers/" rel="me">Pinboard</a></li>
+      </ul>
+    </nav>
+  </div>
 </footer>

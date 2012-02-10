@@ -30,9 +30,9 @@
  */
 ?>
 <fieldset>
-	<legend>Search</legend>
-	<label for="search">Search wimleers.com</label>
-	<input type="text" id="search" name="search_block_form" class="inputText" />
-	<input type="submit" class="inputSubmit" name="op" value="Search" />
-	<?php print $search['hidden'] ?>
+  <legend>Search</legend>
+  <label for="search">Search wimleers.com</label>
+  <input type="text" id="search" name="search_block_form" class="inputText" />
+  <input type="submit" class="inputSubmit" name="op" value="Search" />
+  <?php print $search['hidden'] ?>
 </fieldset>
