@@ -241,12 +241,16 @@ section.main {
 		}
 	}
 
-	footer {
+	footer, .footnotes {
 		margin-top: 7px;
 		border-top: 1px solid #dad7d3;
 		padding-top: 20px;
 		color: #8a8a99;
 	}
+
+  .footnotes hr {
+    display: none;
+  }
 
 	aside {
 		.breadcrumb {
