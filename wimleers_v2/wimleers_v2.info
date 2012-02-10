@@ -1,0 +1,21 @@
+name = wimleers.com v2
+description = Custom theme for wimleers.com, designed by Xavier Bertels (http://xavierbertels.com/). Optimized for WPO.
+package = wimleers.com
+core = 7.x
+
+stylesheets[all][] = css/screen.css
+
+regions[intro] = Intro
+regions[help] = Help
+regions[content] = Content
+regions[sidebar] = Sidebar
+regions[footer] = Footer
+regions_hidden[] = sidebar
+
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
