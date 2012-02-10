@@ -480,6 +480,14 @@ section.main {
       position: relative;
       top: -10px;
       border-radius: 10px; }
+    section.main .body sup a:hover,
+    section.main .body sup a:focus {
+      background: #2385c2;
+      color: #fff; }
+    section.main .body sup a:active {
+      background: #c24523;
+      top: -10px;
+      color: #fff; }
   section.main .body code a {
     color: #c24523;
     border-color: #f3a690; }
@@ -487,19 +495,11 @@ section.main {
   section.main .body a:focus {
     color: #14699e;
     border-color: #2385c2; }
-  section.main .body sup a:hover,
-  section.main .body sup a:focus {
-    background: #2385c2;
-    color: #fff; }
   section.main .body a:active {
     color: #c24523;
     position: relative;
     top: 1px;
     border: 0; }
-  section.main .body sup a:active {
-    background: #c24523;
-    top: -10px;
-    color: #fff; }
   section.main .body pre,
   section.main .body code {
     color: #c24523;
@@ -603,6 +603,18 @@ section.main {
   line-height: 28px;
   color: #878787;
   padding-bottom: 42px; }
+  .front .intro a {
+    color: #878787;
+    border-bottom: 1px solid #878787; }
+  .front .intro a:hover,
+  .front .intro a:focus {
+    color: #2385c2;
+    border-color: #2385c2; }
+  .front .intro a:active {
+    position: relative;
+    top: 1px;
+    border: none;
+    color: #c24523; }
 .front aside.topics {
   background: transparent url(../img/l-big.png) no-repeat 100% 0;
   padding-top: 280px;

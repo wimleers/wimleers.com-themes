@@ -394,6 +394,26 @@ section.main {
 		line-height: 28px;
 		color: #878787;
 		padding-bottom: 42px;
+
+		// Make the links inside the intro subtle!
+		a {
+			color: #878787;
+			border-bottom: 1px solid #878787;
+		}
+
+		a:hover,
+		a:focus {
+			color: #2385c2;
+			border-color: #2385c2;
+		}
+
+		a:active {
+			position: relative;
+			top: 1px;
+			border: none;
+			color: $red;
+		}
+
 	}
 
 	aside.topics {
