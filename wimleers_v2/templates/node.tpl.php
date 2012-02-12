@@ -1,7 +1,9 @@
 <article id="node-<?php print $node->nid; ?>" class="g9 <?php print $classes; ?>"<?php print $attributes; ?>>
   <header>
     <h1<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h1>
-    <p class="meta"><?php print $meta ?></p>
+    <?php if ($meta): ?>
+      <p class="meta"><?php print $meta ?></p>
+    <?php endif; ?>
   </header>
   <div class="body "<?php print $content_attributes; ?>>
     <?php
