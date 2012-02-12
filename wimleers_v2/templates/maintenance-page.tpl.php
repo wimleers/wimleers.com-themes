@@ -44,8 +44,10 @@
     <div class="c16 cf">
       <div class="g10">
         <p>
-          Powered by <a href="http://drupal.org">Drupal</a>.<br />
-          Copyright &copy; 2007&ndash;2011 Wim Leers. All rights reserved.
+          Logo: <a href="http://inespee.com">Ine Spee</a>.
+          Design: <a href="http://xavierbertels.com">Xavier Bertels</a>.
+          Made in <a href="http://en.wikipedia.org/wiki/Hasselt">Hasselt</a>.<br />
+          Copyright 2007&ndash;2011 <a href="http://wimleers.com">Wim Leers</a>. All rights reserved.
         </p>
       </div>
       <nav class="g6">
