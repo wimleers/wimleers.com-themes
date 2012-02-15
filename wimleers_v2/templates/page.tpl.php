@@ -108,6 +108,7 @@
           <div class="g4 pre2">
             <h2>I write about:</h2>
             <?php print $hot_topics_menu; ?>
+            <p> ↪&nbsp;<a href="<?php print $tags_url?>">All tags</a></p>
           </div>
         </aside>
       </div>

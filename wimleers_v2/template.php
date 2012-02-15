@@ -95,6 +95,7 @@ function wimleers_v2_preprocess_page(&$variables) {
   
   $variables['meta_menu']       = theme('links__meta_menu',        array('links' => menu_navigation_links(MENU_META)));  
   $variables['hot_topics_menu'] = theme('links__hot_topics_menu',  array('links' => menu_navigation_links(MENU_HOT_TOPICS), 'attributes' => array('class' => 'topics')));
+  $variables['tags_url']        = url('tags');
   $variables['builtin_search'] = drupal_get_form('search_block_form');
 }
 
