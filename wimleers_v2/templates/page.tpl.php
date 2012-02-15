@@ -95,35 +95,22 @@
           <p style="color:#C24523">New design: <em>beta</em>! <span style="font-size:80%">(Release early, release often!)</span></p>
         </article>
       </div>
-      <div class="body">
-        <section class="g10">
-          <?php print render($page['content']); ?>
-        </section>
-        <aside class="g6 topics">
-          <div class="g4 pre2">
-            <h2>I write about:</h2>
-            <?php print $hot_topics_menu; ?>
-          </div>
-        </aside>
-      </div>
-    <?php else: ?>
-      <?php if ($is_tags_page): ?>
-        <header>
-          <h1><?php print $title ?></h1>
-        </header>
-      <?php endif; ?>
-      <div class="body">
-        <section class="g10">
-          <?php print render($page['content']); ?>
-        </section>
-        <aside class="g6 topics">
-          <div class="g4 pre2">
-            <h2>I write about:</h2>
-            <?php print $hot_topics_menu; ?>
-          </div>
-        </aside>
-      </div>
+    <?php elseif ($is_tags_page): ?>
+      <header>
+        <h1><?php print $title ?></h1>
+      </header>
     <?php endif; ?>
+      <div class="body">
+        <section class="g10">
+          <?php print render($page['content']); ?>
+        </section>
+        <aside class="g6 topics">
+          <div class="g4 pre2">
+            <h2>I write about:</h2>
+            <?php print $hot_topics_menu; ?>
+          </div>
+        </aside>
+      </div>
   </section>
 
 
