@@ -503,9 +503,13 @@ section.writings {
 				}
 
 				p:after {
-					content: "→";
+					content: ">";
 					display: inline-block;
+					background: $arrow;
+					height: 12px;
+					width: 12px;
 					overflow: hidden;
+					text-indent: -9999px;
 					margin-left: 7px;
 				}
 			}
