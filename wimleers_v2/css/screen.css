@@ -457,8 +457,13 @@ section.main {
       font: 400 italic 15px/21px Georgia, serif;
       text-transform: none;
       letter-spacing: 0; }
-  section.main .body p {
+  section.main .body p, section.main .body ul, section.main .body ol, section.main .body pre {
     padding-bottom: 14px; }
+    section.main .body p li, section.main .body ul li, section.main .body ol li, section.main .body pre li {
+      padding-bottom: 7px; }
+  section.main .body ul ul,
+  section.main .body ol ol {
+    padding-left: 1em; }
   section.main .body blockquote {
     font: 400 italic 15px/21px Georgia, sans-serif;
     padding: 0 40px 0; }

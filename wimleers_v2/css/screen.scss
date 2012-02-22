@@ -172,9 +172,18 @@ section.main {
 
 	.body {
 
-		p {
+		p, ul, ol, pre {
 			padding-bottom: 14px;
+
+			li {
+				padding-bottom: 7px;
+			}
 		}
+
+			ul ul,
+			ol ol {
+				padding-left: 1em;
+			}
 
 		blockquote {
 
@@ -363,7 +372,7 @@ section.main {
 				font: 500 11px/20px Verdana, sans-serif;
 			}
 			&.files .file {
-				a { 
+				a {
 					text-transform: none;
 					letter-spacing: normal;
 					color: #2385c2
