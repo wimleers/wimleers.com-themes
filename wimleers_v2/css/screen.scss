@@ -2,10 +2,11 @@
 	Stylesheet: wimleers.com
 	Author: Xavier Bertels
 	Vertical-rhythm: 7px
+	Grid: 960.gs 16 columns
 */
 
 /*
-	CSS Libraries
+	Import CSS Libraries
 */
 
 @import
@@ -15,7 +16,7 @@
 	'grid.scss';
 
 /*
-	Colors
+	Colors for SCSS
 */
 
       $red: #c24523;
@@ -25,38 +26,43 @@ $lightblue: #93cef4;
  $darkblue: #14699E;
 
 /*
-	General Styles
+	Reset browser defaults
 */
 
-* {
-	margin: 0;
-	padding: 0;
-}
-body {
+* { margin: 0; padding: 0; }
+
+header,
+footer,
+section { display: block; }
+
+a { text-decoration: none; }
+
+/*
+	Base Typography
+*/
+
+body
+{
 	font: 14px/21px Verdana, sans-serif;
 	color: #404050;
 	background: #faf7f2;
 	min-width: 960px;
 }
-header,
-footer,
-section {
-	display: block;
-}
 
-.alignRight {
-	float: right;
-}
-.alignLeft {
-	float: left;
-}
+/*
+	Object oriented classes
+*/
 
+.alignRight { float: right; }
+
+.alignLeft { float: left; }
 
 /*
 	Header
 */
 
-header.ofPage {
+header.ofPage
+{
 	height: 100px;
 	border-top: 7px solid #19618d;
 	background: #3a99d5;
@@ -65,40 +71,43 @@ header.ofPage {
 	background:         linear-gradient(#268fd0 0,#2385c2 12%,#58b3ed 96%,#418ebd 100%);
 
 	a,
-	h2 {
+	h2
+	{
 		font: 400 36px/42px "Qlassik Medium", sans-serif;
 		color: #fff;
 	}
 
-	.logo {
+	.logo
+	{
 	 	padding-top: 28px;
 
-		a {
+		a
+		{
 			display: inline-block;
 			border-bottom: 1px solid #76c0ee;
 			line-height: 28px;
 			margin: 7px 0;
 		}
+
 		a:hover,
-		a:focus {
-			border-color: #c0e7ff;
-		}
+		a:focus { border-color: #c0e7ff; }
 	}
 
-	h2 {
-		font: italic 16px/21px Georgia, serif;
-	}
+	h2 { font: italic 16px/21px Georgia, serif; }
 
-	nav ul {
+	nav ul
+	{
 		 margin-top: 60px;
 
-		li {
+		li
+		{
 		list-style: none;
 		float: left;
 		padding: 13px 6px 13px;
 		margin-right: 10px;
 
-			a {
+			a
+			{
 				color: #225270;
 				display: block;
 				float: left;
@@ -109,12 +118,14 @@ header.ofPage {
 			}
 
 			a:hover,
-			a:focus {
+			a:focus
+			{
 				color: #15324E;
 				border-color: #225270;
 			}
 
-			a:active {
+			a:active
+			{
 				position: relative;
 				border: none;
 				top: 1px;
@@ -122,89 +133,95 @@ header.ofPage {
 		}
 
 
-		li.active {
+		li.active
+		{
 			background: #217db7;
 
-			a {
+			a
+			{
 				color: #fff;
 				border: none;
 			}
 		}
 	}
 
-	.meta {
-		a {
-			color: #3075a0;
-			border-color: #3e98d1;
-		}
+	.meta a
+	{
+		color: #3075a0;
+		border-color: #3e98d1;
 	}
-
 }
 
 /*
 	Main Section
 */
 
-section.main {
+section.main
+{
 	padding: 42px 0;
 
-	header {
+	h1 a
+	{
+		color: #c24523;
+		font: 400 26px/28px "Qlassik Medium", sans-serif;
+		margin-bottom: 7px;
+	}
 
-		h1 a {
-			color: #c24523;
-			font: 400 26px/28px "Qlassik Medium", sans-serif;
-			margin-bottom: 7px;
-		}
-		.meta {
-			color: #959ca0;
-			font: 700 11px/21px Verdana, sans-serif;
-			text-transform: uppercase;
-			letter-spacing: 1px;
-			margin-bottom: 14px;
+	.meta
+	{
+		color: #959ca0;
+		font: 700 11px/21px Verdana, sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin-bottom: 14px;
 
-			span {
-				font: 400 italic 15px/21px Georgia, serif;
-				text-transform: none;
-				letter-spacing: 0;
-			}
+		span
+		{
+			font: 400 italic 15px/21px Georgia, serif;
+			text-transform: none;
+			letter-spacing: 0;
 		}
 	}
 
-	.body {
+	//	section.main .body
 
-		p, ul, ol, pre {
+	.body
+	{
+
+		p, ul, ol, pre
+		{
 			padding-bottom: 14px;
 
-			li {
-				padding-bottom: 7px;
-			}
+			li { padding-bottom: 7px; }
 		}
 
 			ul ul,
-			ol ol {
-				padding-left: 1em;
-			}
+			ol ol { padding-left: 1em; }
 
-		blockquote {
-
+		blockquote
+		{
 			font: 400 italic 15px/21px Georgia, sans-serif;
 			padding: 0 40px 0;
 		}
 
-		h2 {
+		h2
+		{
 			padding: 7px 0;
 			font: 20px/21px "Qlassik Medium", sans-serif;
 		}
 
-		a {
+		a
+		{
 			color: $blue;
 			border-bottom: 1px solid $lightblue;
 		}
 
-		sup {
+		sup
+		{
 			vertical-align: baseline;
 
-			a {
+			a
+			{
 				background: $lightblue;
 				border: none;
 				color: #fff;
@@ -217,12 +234,14 @@ section.main {
 			}
 
 			a:hover,
-			a:focus {
+			a:focus
+			{
 				background: $blue;
 				color: #fff;
 			}
 
-			a:active {
+			a:active
+			{
 				background: $red;
 				top: -10px;
 				color: #fff;
@@ -230,18 +249,21 @@ section.main {
 
 		}
 
-		code a {
+		code a
+		{
 			color: $red;
 			border-color: $borderred;
 		}
 
 		a:hover,
-		a:focus {
+		a:focus
+		{
 			color: $darkblue;
 			border-color: $blue;
 		}
 
-		a:active {
+		a:active
+		{
 			color: $red;
 			position: relative;
 			top: 1px;
@@ -249,49 +271,58 @@ section.main {
 		}
 
 		pre,
-		code {
+		code
+		{
 			color: $red;
 			font: 400 14px/21px "Monaco", monospace;
 		}
 	}
 
-	footer, .footnotes {
+	footer,
+	.footnotes
+	{
 		margin-top: 7px;
 		border-top: 1px solid #dad7d3;
 		padding-top: 20px;
 		color: #8a8a99;
 	}
 
-  .footnotes hr {
-    display: none;
-  }
+	.footnotes hr { display: none; }
 
-	aside {
-		.breadcrumb {
+	aside
+	{
+
+		.breadcrumb
+		{
 			color: #a8a8a8;
 			font-size: 13px;;
 			margin-top: 7px;
 
-			a {
+			a
+			{
 				color: #a8a8a8;
 				border-bottom: 1px solid #ccc;
 			}
 		}
 
-		ul {
+		ul
+		{
 			list-style: none;
 
-			a {
+			a
+			{
 				font: 700 11px/20px Verdana, sans-serif;
 				text-transform: uppercase;
 				letter-spacing: 1px;
 			}
 
-			&.tags li {
+			&.tags li
+			{
 				display: inline-block;
 				margin: 0 7px 7px 0;
 
-				a {
+				a
+				{
 					float: left;
 					height: 20px;
 					margin-bottom: 1px;
@@ -305,7 +336,8 @@ section.main {
 			           border-top-left-radius: 2px;
 				}
 
-				a:before {
+				a:before
+				{
 					content: "";
 					float: right;
 					position: absolute;
@@ -318,7 +350,8 @@ section.main {
 					border-width: 10px 0 10px 10px;
 				}
 
-				a:after {
+				a:after
+				{
 					content: "";
 					position: absolute;
 					top: 8px;
@@ -331,36 +364,30 @@ section.main {
 				}
 
 				a:hover,
-				a:focus {
-					background: #aaa;
-				}
+				a:focus { background: #aaa; }
+
+				a:active { background: $red; }
 
 				a:hover:before,
-				a:focus:before {
-					border-color: transparent transparent transparent #aaa;
-				}
+				a:focus:before { border-color: transparent transparent transparent #aaa; }
 
-				a:active {
-					background: $red;
-				}
-
-				a:active:before {
-					border-color: transparent transparent transparent $red;
-				}
+				a:active:before { border-color: transparent transparent transparent $red; }
 			}
 
-			&.topics li {
-				 a {
+			&.topics li
+			{
+
+				a
+				{
 					color: #2385c2;
 					border-bottom: 1px solid #94c7e7;
 				}
 
 				a:hover,
-				a:focus {
-					border-color: #2385c2;
-				}
+				a:focus { border-color: #2385c2; }
 
-				a:active {
+				a:active
+				{
 					position: relative;
 					top: 1px;
 					border: none;
@@ -368,25 +395,28 @@ section.main {
 				}
 			}
 
-			&.files .filesize {
-				font: 500 11px/20px Verdana, sans-serif;
-			}
-			&.files .file {
-				a {
+			&.files .filesize { font: 500 11px/20px Verdana, sans-serif; }
+
+			&.files .file
+			{
+				a
+				{
 					text-transform: none;
 					letter-spacing: normal;
 					color: #2385c2
 				}
 
 				a:hover,
-				a:focus {
+				a:focus
+				{
 					color: #14699e;
 					border-color: #2385c2;
 				}
 			}
 		}
 
-		h1 {
+		h1
+		{
 			font: 400 italic 15px/21px Georgia, sans-serif;
 			margin: 28px 0 7px;
 		}
@@ -398,34 +428,39 @@ section.main {
 */
 
 .front {
-	.intro {
+
+	.intro
+	{
 		font-size: 18px;
 		line-height: 28px;
 		color: #878787;
 		padding-bottom: 42px;
 
 		// Make the links inside the intro subtle!
-		a {
+		a
+		{
 			color: #878787;
 			border-bottom: 1px solid #878787;
 		}
 
 		a:hover,
-		a:focus {
+		a:focus
+		{
 			color: #2385c2;
 			border-color: #2385c2;
 		}
 
-		a:active {
+		a:active
+		{
 			position: relative;
 			top: 1px;
 			border: none;
 			color: $red;
 		}
-
 	}
 
-	aside.topics {
+	aside.topics
+	{
 		background: transparent $biglama no-repeat 100% 0;
 		padding-top: 280px;
 		margin-top: -168px;
@@ -437,29 +472,35 @@ section.main {
 	Writings: add class="writings" to <section> tag
 */
 
-section.writings {
-	.body {
+section.writings
+{
+	.body
+	{
 		border-top: 4px solid #ddd;
 
-		article {
+		article
+		{
 			border-bottom: 1px solid #dad7d3;
 			padding: 21px 0 20px;
 
-			.meta {
+			.meta
+			{
 				color: #b8b5b2;
 				padding-top: 7px;
 				text-transform: uppercase;
 				font-size: 13px;
 
 				// day
-				.d {
+				.d
+				{
 					font-weight: 700;
 					font-size: 20px;
 					line-height: 21px;
 				}
 
 				// month
-				.m {
+				.m
+				{
 					letter-spacing: 1px;
 					display: block;
 				}
@@ -467,51 +508,47 @@ section.writings {
 				// tags: article, post, talk
 				.tag-a,
 				.tag-b,
-				.tag-t {
+				.tag-t
+				{
 					letter-spacing: 1px;
 					font-weight: 700;
 					font-size: 10px;
 					display: inline-block;
 				}
 
-				.tag-a {
-					color: #b0312e;
-				}
+				.tag-a { color: #b0312e; }
 
-				.tag-b {
-					color: #315389;
-				}
+				.tag-b { color: #315389; }
 
-				.tag-t {
-					color: #c98e32;
-				}
+				.tag-t { color: #c98e32; }
 
 				.tag-a:hover,
 				.tag-b:hover,
-				.tag-t:hover {
+				.tag-t:hover
+				{
 					padding: 0 7px;
 					margin-left: -7px;
 					background: #f0ebe4;
 					border-radius: 3px;
 				}
-
 			}
 
-			a {
+			a
+			{
 				border: none;
 
-				h2 {
+				h2
+				{
 					color: #5c5553;
 					font-size: 26px;
 					line-height: 28px;
 					margin-bottom: 14px;
 				}
 
-				p {
-					color: #858381;
-				}
+				p { color: #858381; }
 
-				p:after {
+				p:after
+				{
 					content: ">";
 					display: inline-block;
 					background: $arrow;
@@ -526,30 +563,27 @@ section.writings {
 			a:hover h2,
 			a:hover p,
 			a:focus h2,
-			a:focus p {
-				color: #c24523;
-			}
+			a:focus p { color: #c24523; }
 
 			a:hover p:after,
-			a:focus p:after {
-				background-position: 0 -12px;
-			}
+			a:focus p:after { background-position: 0 -12px; }
 		}
 
-		aside.topics {
+		aside.topics
+		{
 
-			h2 {
+			h2
+			{
 				color: #9e9c99;
 				font-size: 26px;
 				line-height: 28px;
 				margin-bottom: 7px;
 			}
 
-			li {
-				margin-bottom: 7px;
-			}
+			li { margin-bottom: 7px; }
 
-			a {
+			a
+			{
 				color: #9e9c99;
 				border-color: #d8d5d1;
 				font-weight: 400;
@@ -559,14 +593,13 @@ section.writings {
 			}
 
 			a:hover,
-			a:focus {
+			a:focus
+			{
 				color: $blue;
 				border-color: $blue;
 			}
 
-			a:active {
-				color: $red;
-			}
+			a:active { color: $red; }
 		}
 	}
 }
@@ -576,7 +609,8 @@ section.writings {
 	Footer
 */
 
-footer.ofPage {
+footer.ofPage
+{
 	background: #2385c2;
 	display: block;
 	clear: both;
@@ -585,28 +619,30 @@ footer.ofPage {
 	font-size: 13px;
 	box-shadow: 0 -2px 3px transparentize(#397ca6, 0.44), inset 0 -1px transparentize(#fff, 0.44);
 
-	a {
+	a
+	{
 		color: #9accec;
 		border-bottom: 1px solid #51a2d4;
 	}
 
 	a:hover,
-	a:focus {
+	a:focus
+	{
 		color: #A7D9FF;
 		border-color: #9accec;
 	}
 
-	a:active {
+	a:active
+	{
 		position: relative;
 		top: 1px;
 		border: none;
 	}
 
-	nav {
-		position: relative;
-	}
+	nav { position: relative; }
 
-	nav:after {
+	nav:after
+	{
 		content: ".";
 		display: block;
 		background: url(../img/l.png) no-repeat;
@@ -620,12 +656,14 @@ footer.ofPage {
 		text-indent: -9999px;
 	}
 
-	nav ul {
+	nav ul
+	{
 		list-style: none;
 		border-left: 1px solid #4c98c8;
 		padding-left: 9px;
 
-		a {
+		a
+		{
 			color: #bbe0f8;
 			border: none;
 			font: 700 11px/21px Verdana, sans-serif;
@@ -634,24 +672,20 @@ footer.ofPage {
 		}
 
 		a:hover,
-		a:focus {
-			color: #fff;
-		}
+		a:focus { color: #fff; }
 	}
 
-	form {
+	form
+	{
 		margin: 7px 0 28px;
 
-		fieldset {
-			border: none;
-		}
+		fieldset { border: none; }
 
 		legend,
-		label {
-			display: none;
-		}
+		label { display: none; }
 
-		.inputText {
+		.inputText
+		{
 			float: left;
 			font: 13px/13px Verdana, sans-serif;
 			padding: 5px 6px 5px;
@@ -665,7 +699,8 @@ footer.ofPage {
 			background:         linear-gradient(top, #aaa 0, #fff 3px);
 		}
 
-		.inputSubmit {
+		.inputSubmit
+		{
 			float: left;
 			width: 40px;
 			height: 28px;
@@ -678,21 +713,12 @@ footer.ofPage {
 		}
 
 		.inputSubmit:hover,
-		.inputSubmit:focus {
-			background-color: #57b3ed;
-		}
+		.inputSubmit:focus { background-color: #57b3ed; }
 
-		.inputSubmit:active {
+		.inputSubmit:active
+		{
 			box-shadow: inset 0 2px 4px 1px rgba(0,0,0,.33);
 			background-color: #4b9acc;
 		}
 	}
-}
-
-
-/*
-	Links
-*/
-a {
-	text-decoration: none;
 }
