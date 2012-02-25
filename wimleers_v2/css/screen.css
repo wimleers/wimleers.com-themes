@@ -626,8 +626,8 @@ section.main {
   margin-top: -168px; }
 
 /*
-  Writings: add class="writings" to <section> tag
- */
+	Writings: add class="writings" to <section> tag
+*/
 section.writings .body {
   border-top: 4px solid #ddd; }
   section.writings .body article {
