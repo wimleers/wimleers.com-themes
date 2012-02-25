@@ -2,7 +2,6 @@
 	Stylesheet: wimleers.com
 	Author: Xavier Bertels
 	Vertical-rhythm: 7px
-	Grid: 960.gs 16 columns
 */
 /*
 	Import CSS Libraries
@@ -370,6 +369,11 @@ body {
   background: #faf7f2;
   min-width: 960px; }
 
+h1 a {
+  color: #c24523;
+  font: 400 26px/28px "Qlassik Medium", sans-serif;
+  margin-bottom: 7px; }
+
 /*
 	Object oriented classes
 */
@@ -380,39 +384,39 @@ body {
   float: left; }
 
 /*
-	Header
+	Site Header
 */
-header.ofPage {
+.siteHead {
   height: 100px;
   border-top: 7px solid #19618d;
   background: #3a99d5;
   background: -webkit-linear-gradient(#268fd0 0, #2385c2 12%, #58b3ed 96%, #418ebd 100%);
   background: -moz-linear-gradient(#268fd0 0, #2385c2 12%, #58b3ed 96%, #418ebd 100%);
-  background: linear-gradient(#268fd0 0, #2385c2 12%, #58b3ed 96%, #418ebd 100%); }
-  header.ofPage a,
-  header.ofPage h2 {
+  background: linear-gradient(#268fd0 0, #2385c2 12%, #58b3ed 96%, #418ebd 100%);
+  color: #fff; }
+  .siteHead a {
     font: 400 36px/42px "Qlassik Medium", sans-serif;
     color: #fff; }
-  header.ofPage .logo {
+  .siteHead .logo {
     padding-top: 28px; }
-    header.ofPage .logo a {
+    .siteHead .logo a {
       display: inline-block;
       border-bottom: 1px solid #76c0ee;
       line-height: 28px;
       margin: 7px 0; }
-    header.ofPage .logo a:hover,
-    header.ofPage .logo a:focus {
+    .siteHead .logo a:hover,
+    .siteHead .logo a:focus {
       border-color: #c0e7ff; }
-  header.ofPage h2 {
+  .siteHead h2 {
     font: italic 16px/21px Georgia, serif; }
-  header.ofPage nav ul {
+  .siteHead nav ul {
     margin-top: 60px; }
-    header.ofPage nav ul li {
+    .siteHead nav ul li {
       list-style: none;
       float: left;
       padding: 13px 6px 13px;
       margin-right: 10px; }
-      header.ofPage nav ul li a {
+      .siteHead nav ul li a {
         color: #225270;
         display: block;
         float: left;
@@ -420,20 +424,20 @@ header.ofPage {
         letter-spacing: 1px;
         text-transform: uppercase;
         border-bottom: 1px solid #217eb8; }
-      header.ofPage nav ul li a:hover,
-      header.ofPage nav ul li a:focus {
+      .siteHead nav ul li a:hover,
+      .siteHead nav ul li a:focus {
         color: #15324E;
         border-color: #225270; }
-      header.ofPage nav ul li a:active {
+      .siteHead nav ul li a:active {
         position: relative;
         border: none;
         top: 1px; }
-    header.ofPage nav ul li.active {
+    .siteHead nav ul li.active {
       background: #217db7; }
-      header.ofPage nav ul li.active a {
+      .siteHead nav ul li.active a {
         color: #fff;
         border: none; }
-  header.ofPage .meta a {
+  .siteHead .meta a {
     color: #3075a0;
     border-color: #3e98d1; }
 
@@ -442,36 +446,54 @@ header.ofPage {
 */
 section.main {
   padding: 42px 0; }
-  section.main h1 a {
-    color: #c24523;
-    font: 400 26px/28px "Qlassik Medium", sans-serif;
-    margin-bottom: 7px; }
-  section.main .meta {
+  section.main header .meta {
     color: #959ca0;
     font: 700 11px/21px Verdana, sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 14px; }
-    section.main .meta span {
+    section.main header .meta span {
       font: 400 italic 15px/21px Georgia, serif;
       text-transform: none;
       letter-spacing: 0; }
-  section.main .body p, section.main .body ul, section.main .body ol, section.main .body pre {
+  section.main h2,
+  section.main h3,
+  section.main h4 {
+    padding: 7px 0;
+    font: 20px/21px "Qlassik Medium", sans-serif; }
+  section.main blockquote {
+    font: 400 italic 15px/21px Georgia, sans-serif;
+    padding: 0 40px 0; }
+  section.main pre,
+  section.main code {
+    color: #c24523;
+    font: 400 14px/21px "Monaco", monospace; }
+    section.main pre a,
+    section.main code a {
+      color: #c24523;
+      border-color: #f3a690; }
+  section.main .body p,
+  section.main .body ul,
+  section.main .body ol,
+  section.main .body pre {
     padding-bottom: 14px; }
-    section.main .body p li, section.main .body ul li, section.main .body ol li, section.main .body pre li {
-      padding-bottom: 7px; }
+  section.main .body li {
+    padding-bottom: 7px; }
   section.main .body ul ul,
   section.main .body ol ol {
     padding-left: 1em; }
-  section.main .body blockquote {
-    font: 400 italic 15px/21px Georgia, sans-serif;
-    padding: 0 40px 0; }
-  section.main .body h2 {
-    padding: 7px 0;
-    font: 20px/21px "Qlassik Medium", sans-serif; }
   section.main .body a {
     color: #2385c2;
     border-bottom: 1px solid #93cef4; }
+  section.main .body a:hover,
+  section.main .body a:focus {
+    color: #14699e;
+    border-color: #2385c2; }
+  section.main .body a:active {
+    color: #c24523;
+    position: relative;
+    top: 1px;
+    border: 0; }
   section.main .body sup {
     vertical-align: baseline; }
     section.main .body sup a {
@@ -492,22 +514,6 @@ section.main {
       background: #c24523;
       top: -10px;
       color: #fff; }
-  section.main .body code a {
-    color: #c24523;
-    border-color: #f3a690; }
-  section.main .body a:hover,
-  section.main .body a:focus {
-    color: #14699e;
-    border-color: #2385c2; }
-  section.main .body a:active {
-    color: #c24523;
-    position: relative;
-    top: 1px;
-    border: 0; }
-  section.main .body pre,
-  section.main .body code {
-    color: #c24523;
-    font: 400 14px/21px "Monaco", monospace; }
   section.main footer,
   section.main .footnotes {
     margin-top: 7px;
@@ -542,8 +548,7 @@ section.main {
         padding: 3px 7px 4px;
         margin-right: 5px;
         padding: 0 10px 0 10px;
-        border-bottom-left-radius: 2px;
-        border-top-left-radius: 2px; }
+        border-radius: 2px 0 0 2px; }
       section.main aside ul.tags li a:before {
         content: "";
         float: right;
@@ -713,9 +718,9 @@ section.writings .body {
     color: #c24523; }
 
 /*
-	Footer
+	Site Footer
 */
-footer.ofPage {
+.siteFoot {
   background: #2385c2;
   display: block;
   clear: both;
@@ -723,20 +728,20 @@ footer.ofPage {
   color: #9accec;
   font-size: 13px;
   box-shadow: 0 -2px 3px rgba(57, 124, 166, 0.56), inset 0 -1px rgba(255, 255, 255, 0.56); }
-  footer.ofPage a {
+  .siteFoot a {
     color: #9accec;
     border-bottom: 1px solid #51a2d4; }
-  footer.ofPage a:hover,
-  footer.ofPage a:focus {
+  .siteFoot a:hover,
+  .siteFoot a:focus {
     color: #A7D9FF;
     border-color: #9accec; }
-  footer.ofPage a:active {
+  .siteFoot a:active {
     position: relative;
     top: 1px;
     border: none; }
-  footer.ofPage nav {
+  .siteFoot nav {
     position: relative; }
-  footer.ofPage nav:after {
+  .siteFoot nav:after {
     content: ".";
     display: block;
     background: url(../img/l.png) no-repeat;
@@ -748,27 +753,27 @@ footer.ofPage {
     right: 0;
     overflow: hidden;
     text-indent: -9999px; }
-  footer.ofPage nav ul {
+  .siteFoot nav ul {
     list-style: none;
     border-left: 1px solid #4c98c8;
     padding-left: 9px; }
-    footer.ofPage nav ul a {
+    .siteFoot nav ul a {
       color: #bbe0f8;
       border: none;
       font: 700 11px/21px Verdana, sans-serif;
       text-transform: uppercase;
       letter-spacing: 1px; }
-    footer.ofPage nav ul a:hover,
-    footer.ofPage nav ul a:focus {
+    .siteFoot nav ul a:hover,
+    .siteFoot nav ul a:focus {
       color: #fff; }
-  footer.ofPage form {
+  .siteFoot form {
     margin: 7px 0 28px; }
-    footer.ofPage form fieldset {
+    .siteFoot form fieldset {
       border: none; }
-    footer.ofPage form legend,
-    footer.ofPage form label {
+    .siteFoot form legend,
+    .siteFoot form label {
       display: none; }
-    footer.ofPage form .inputText {
+    .siteFoot form .inputText {
       float: left;
       font: 13px/13px Verdana, sans-serif;
       padding: 5px 6px 5px;
@@ -780,7 +785,7 @@ footer.ofPage {
       background: -webkit-linear-gradient(top, #aaaaaa 0, white 3px);
       background: -moz-linear-gradient(top, #aaaaaa 0, white 3px);
       background: linear-gradient(top, #aaaaaa 0, white 3px); }
-    footer.ofPage form .inputSubmit {
+    .siteFoot form .inputSubmit {
       float: left;
       width: 40px;
       height: 28px;
@@ -790,9 +795,9 @@ footer.ofPage {
       background: #4b9acc url(data:image/gif;base64,R0lGODlhEQAQAPUyAMni8mG08uPt8mO08ne982y48mCz8vDz8tfo8vb18uLt8onF8nO885vN8s3k84fE8pnM85DI82W18uvx8nW884/I822589zq8vj28uDs8r3d8uXu8cvj89Xn8qPQ8oXE8rvb8rXY85fM88Lf8pTK8+7y8u3x8trp8ufv8We28qvU83m+87fZ8tPm8mm38sXh8t7r8vr38V6x8gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C1hNUCBEYXRhWE1QAT8AIfkEBQAAMgAsAAAAABEAEAAABoVAmdASEsQODpFByGR+DrGoFFFoChnQzMJgWChisIBVE1MMmhKjx2qKPayySuzSHETFVkmsZE3EzlYpMQJWHTERcBExLFYQg1VMBRsJDFYBCDEmDRQUDW0OcDIuHFKlMSChMhAvKAgqD20xI3ipQgSxAIC1MgQTUS20tb0xGCu7TAQnJDJBADs=) no-repeat 50% 6px;
       background-color: #4b9acc;
       text-indent: -9999px; }
-    footer.ofPage form .inputSubmit:hover,
-    footer.ofPage form .inputSubmit:focus {
+    .siteFoot form .inputSubmit:hover,
+    .siteFoot form .inputSubmit:focus {
       background-color: #57b3ed; }
-    footer.ofPage form .inputSubmit:active {
+    .siteFoot form .inputSubmit:active {
       box-shadow: inset 0 2px 4px 1px rgba(0, 0, 0, 0.33);
       background-color: #4b9acc; }

@@ -2,7 +2,6 @@
 	Stylesheet: wimleers.com
 	Author: Xavier Bertels
 	Vertical-rhythm: 7px
-	Grid: 960.gs 16 columns
 */
 
 /*
@@ -49,6 +48,13 @@ body
 	min-width: 960px;
 }
 
+h1 a
+{
+	color: #c24523;
+	font: 400 26px/28px "Qlassik Medium", sans-serif;
+	margin-bottom: 7px;
+}
+
 /*
 	Object oriented classes
 */
@@ -58,10 +64,10 @@ body
 .alignLeft { float: left; }
 
 /*
-	Header
+	Site Header
 */
 
-header.ofPage
+.siteHead
 {
 	height: 100px;
 	border-top: 7px solid #19618d;
@@ -69,9 +75,9 @@ header.ofPage
 	background: -webkit-linear-gradient(#268fd0 0,#2385c2 12%,#58b3ed 96%,#418ebd 100%);
 	background:    -moz-linear-gradient(#268fd0 0,#2385c2 12%,#58b3ed 96%,#418ebd 100%);
 	background:         linear-gradient(#268fd0 0,#2385c2 12%,#58b3ed 96%,#418ebd 100%);
+	color: #fff;
 
 	a,
-	h2
 	{
 		font: 400 36px/42px "Qlassik Medium", sans-serif;
 		color: #fff;
@@ -160,14 +166,7 @@ section.main
 {
 	padding: 42px 0;
 
-	h1 a
-	{
-		color: #c24523;
-		font: 400 26px/28px "Qlassik Medium", sans-serif;
-		margin-bottom: 7px;
-	}
-
-	.meta
+	header .meta
 	{
 		color: #959ca0;
 		font: 700 11px/21px Verdana, sans-serif;
@@ -183,37 +182,64 @@ section.main
 		}
 	}
 
-	//	section.main .body
+	h2,
+	h3,
+	h4
+	{
+		padding: 7px 0;
+		font: 20px/21px "Qlassik Medium", sans-serif;
+	}
+
+	blockquote
+	{
+		font: 400 italic 15px/21px Georgia, sans-serif;
+		padding: 0 40px 0;
+	}
+
+	pre,
+	code
+	{
+		color: $red;
+		font: 400 14px/21px "Monaco", monospace;
+
+		a
+		{
+			color: $red;
+			border-color: $borderred;
+		}
+	}
 
 	.body
 	{
 
-		p, ul, ol, pre
-		{
-			padding-bottom: 14px;
+		p,
+		ul,
+		ol,
+		pre { padding-bottom: 14px; }
 
-			li { padding-bottom: 7px; }
-		}
+		li { padding-bottom: 7px; }
 
 			ul ul,
 			ol ol { padding-left: 1em; }
-
-		blockquote
-		{
-			font: 400 italic 15px/21px Georgia, sans-serif;
-			padding: 0 40px 0;
-		}
-
-		h2
-		{
-			padding: 7px 0;
-			font: 20px/21px "Qlassik Medium", sans-serif;
-		}
-
 		a
 		{
 			color: $blue;
 			border-bottom: 1px solid $lightblue;
+		}
+
+		a:hover,
+		a:focus
+		{
+			color: $darkblue;
+			border-color: $blue;
+		}
+
+		a:active
+		{
+			color: $red;
+			position: relative;
+			top: 1px;
+			border: 0;
 		}
 
 		sup
@@ -246,35 +272,6 @@ section.main
 				top: -10px;
 				color: #fff;
 			}
-
-		}
-
-		code a
-		{
-			color: $red;
-			border-color: $borderred;
-		}
-
-		a:hover,
-		a:focus
-		{
-			color: $darkblue;
-			border-color: $blue;
-		}
-
-		a:active
-		{
-			color: $red;
-			position: relative;
-			top: 1px;
-			border: 0;
-		}
-
-		pre,
-		code
-		{
-			color: $red;
-			font: 400 14px/21px "Monaco", monospace;
 		}
 	}
 
@@ -332,8 +329,7 @@ section.main
 					padding: 3px 7px 4px;
 					margin-right: 5px;
 					padding: 0 10px 0 10px;
-			        border-bottom-left-radius: 2px;
-			           border-top-left-radius: 2px;
+					border-radius: 2px 0 0 2px;
 				}
 
 				a:before
@@ -606,10 +602,10 @@ section.writings
 
 
 /*
-	Footer
+	Site Footer
 */
 
-footer.ofPage
+.siteFoot
 {
 	background: #2385c2;
 	display: block;

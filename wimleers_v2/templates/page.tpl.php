@@ -67,7 +67,7 @@
  */
 ?>
 
-<header id="header" class="ofPage">
+<header id="header" class="siteHead">
   <nav class="c16">
     <div class="g7 logo">
       <h1 id="site-name">
@@ -161,7 +161,7 @@
     <?php if ($node): ?>
       <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
       <?php print render($page['help']); ?>
-      <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>        
+      <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
       <?php print render($page['content']); ?>
     <?php else: ?>
       <article class="g9">
@@ -179,7 +179,7 @@
   </section>
 <?php endif; ?>
 
-<footer class="ofPage">
+<footer class="siteFoot">
   <div class="c16 cf">
     <div class="g10">
       <?php print render($builtin_search); ?>
