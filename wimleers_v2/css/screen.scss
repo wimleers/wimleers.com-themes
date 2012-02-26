@@ -451,6 +451,8 @@ section.main
 		}
 	}
 
+	.body { border-top: 4px solid #ddd; }
+
 	aside.topics
 	{
 		background: transparent $biglama no-repeat 100% 0;
@@ -468,7 +470,6 @@ section.writings
 {
 	.body
 	{
-		border-top: 4px solid #ddd;
 
 		article
 		{
