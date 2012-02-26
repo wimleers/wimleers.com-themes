@@ -416,53 +416,6 @@ section.main
 }
 
 /*
-	Front: add class="front" to <body> tag
-*/
-
-.front {
-
-	.intro
-	{
-		font-size: 18px;
-		line-height: 28px;
-		color: #878787;
-		padding-bottom: 42px;
-
-		// Make the links inside the intro subtle!
-		a
-		{
-			color: #878787;
-			border-bottom: 1px solid #878787;
-		}
-
-		a:hover,
-		a:focus
-		{
-			color: #2385c2;
-			border-color: #2385c2;
-		}
-
-		a:active
-		{
-			position: relative;
-			top: 1px;
-			border: none;
-			color: $red;
-		}
-	}
-
-	.body { border-top: 4px solid #ddd; }
-
-	aside.topics
-	{
-		background: transparent $biglama no-repeat 100% 0;
-		padding-top: 280px;
-		margin-top: -168px;
-	}
-}
-
-
-/*
 	Writings: add class="writings" to <section> tag
 */
 
@@ -561,39 +514,90 @@ section.writings
 			a:hover p:after,
 			a:focus p:after { background-position: 0 -12px; }
 		}
+	}
 
-		aside.topics
+	/*
+		Widget: topics
+	*/
+
+	aside.topics
+	{
+		padding-top: 21px;
+
+		h2
 		{
-
-			h2
-			{
-				color: #9e9c99;
-				font-size: 26px;
-				line-height: 28px;
-				margin-bottom: 7px;
-			}
-
-			li { margin-bottom: 7px; }
-
-			a
-			{
-				color: #9e9c99;
-				border-color: #d8d5d1;
-				font-weight: 400;
-				text-transform: none;
-				letter-spacing: 0;
-				font-size: 14px;
-			}
-
-			a:hover,
-			a:focus
-			{
-				color: $blue;
-				border-color: $blue;
-			}
-
-			a:active { color: $red; }
+			color: #9e9c99;
+			font-size: 26px;
+			line-height: 28px;
+			margin-bottom: 7px;
 		}
+
+		li { margin-bottom: 7px; }
+
+		a
+		{
+			color: #9e9c99;
+			border-color: #d8d5d1;
+			font-weight: 400;
+			text-transform: none;
+			letter-spacing: 0;
+			font-size: 14px;
+		}
+
+		a:hover,
+		a:focus
+		{
+			color: $blue;
+			border-color: $blue;
+		}
+
+		a:active { color: $red; }
+	}
+}
+
+/*
+	Front (homepage): add class="front" to <body> tag
+*/
+
+.front {
+
+	.intro
+	{
+		font-size: 18px;
+		line-height: 28px;
+		color: #878787;
+		padding-bottom: 42px;
+
+		// Make the links inside the intro subtle!
+		a
+		{
+			color: #878787;
+			border-bottom: 1px solid #878787;
+		}
+
+		a:hover,
+		a:focus
+		{
+			color: #2385c2;
+			border-color: #2385c2;
+		}
+
+		a:active
+		{
+			position: relative;
+			top: 1px;
+			border: none;
+			color: $red;
+		}
+	}
+
+	.body { border-top: 4px solid #ddd; }
+
+	.writings aside.topics
+	{
+		background: transparent $biglama no-repeat 100% 0;
+		padding-top: 280px;
+		margin-top: -168px;
 	}
 }
 
