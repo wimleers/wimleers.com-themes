@@ -472,6 +472,8 @@ section.main {
     section.main code a {
       color: #c24523;
       border-color: #f3a690; }
+  section.main sup {
+    vertical-align: baseline; }
   section.main .body p,
   section.main .body ul,
   section.main .body ol,
@@ -494,8 +496,6 @@ section.main {
     position: relative;
     top: 1px;
     border: 0; }
-  section.main .body sup {
-    vertical-align: baseline; }
   section.main .body a[rel="footnote"] {
     border: none;
     color: #A99;

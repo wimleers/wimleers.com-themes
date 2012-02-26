@@ -209,6 +209,8 @@ section.main
 		}
 	}
 
+	sup { vertical-align: baseline; }
+
 	.body
 	{
 
@@ -241,8 +243,6 @@ section.main
 			top: 1px;
 			border: 0;
 		}
-
-		sup { vertical-align: baseline; }
 
 		a[rel="footnote"]
 		{
