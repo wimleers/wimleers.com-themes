@@ -466,9 +466,8 @@ th {
         color: #15324E;
         border-color: #225270; }
       .siteHead nav ul li a:active {
-        position: relative;
         border: none;
-        top: 1px; }
+        margin: 1px 0 -1px; }
     .siteHead nav ul li.active {
       background: #217db7; }
       .siteHead nav ul li.active a {
