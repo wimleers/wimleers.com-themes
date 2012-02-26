@@ -357,9 +357,6 @@ footer,
 section {
   display: block; }
 
-a {
-  text-decoration: none; }
-
 /*
 	Base Typography
 */
@@ -373,7 +370,13 @@ h1 {
   font: 400 26px/28px "Qlassik Medium", sans-serif;
   margin-bottom: 7px; }
   h1 a {
-    color: #c24523; }
+    color: #c24523;
+    border: none; }
+
+a {
+  text-decoration: none;
+  border-bottom: 1px solid #93cef4;
+  color: #2385c2; }
 
 /*
 	Object oriented classes
@@ -383,6 +386,14 @@ h1 {
 
 .alignLeft {
   float: left; }
+
+.pager {
+  list-style: none;
+  text-align: right;
+  color: #878787; }
+  .pager li {
+    padding: 14px 7px;
+    display: inline-block; }
 
 /*
 	Site Header
@@ -492,9 +503,6 @@ section.main {
   section.main .body ul ul,
   section.main .body ol ol {
     padding-left: 1em; }
-  section.main .body a {
-    color: #2385c2;
-    border-bottom: 1px solid #93cef4; }
   section.main .body a:hover,
   section.main .body a:focus {
     color: #14699e;
@@ -555,7 +563,8 @@ section.main {
         padding: 3px 7px 4px;
         margin-right: 5px;
         padding: 0 10px 0 10px;
-        border-radius: 2px 0 0 2px; }
+        border-radius: 2px 0 0 2px;
+        border: none; }
       section.main aside ul.tags li a:before {
         content: "";
         float: right;

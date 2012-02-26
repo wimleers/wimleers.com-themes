@@ -34,8 +34,6 @@ header,
 footer,
 section { display: block; }
 
-a { text-decoration: none; }
-
 /*
 	Base Typography
 */
@@ -53,8 +51,20 @@ h1
 	font: 400 26px/28px "Qlassik Medium", sans-serif;
 	margin-bottom: 7px;
 
-	a { color: #c24523; }
+	a
+	{
+		color: #c24523;
+		border: none;
+	}
 }
+
+a
+{
+	text-decoration: none;
+	border-bottom: 1px solid $lightblue;
+	color: $blue;
+}
+
 
 /*
 	Object oriented classes
@@ -63,6 +73,19 @@ h1
 .alignRight { float: right; }
 
 .alignLeft { float: left; }
+
+.pager
+{
+	list-style: none;
+	text-align: right;
+	color: #878787;
+
+	li
+	{
+		padding: 14px 7px;
+		display: inline-block;
+	}
+}
 
 /*
 	Site Header
@@ -234,11 +257,6 @@ section.main
 
 			ul ul,
 			ol ol { padding-left: 1em; }
-		a
-		{
-			color: $blue;
-			border-bottom: 1px solid $lightblue;
-		}
 
 		a:hover,
 		a:focus
@@ -337,6 +355,7 @@ section.main
 					margin-right: 5px;
 					padding: 0 10px 0 10px;
 					border-radius: 2px 0 0 2px;
+					border: none;
 				}
 
 				a:before
