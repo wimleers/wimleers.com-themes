@@ -166,19 +166,23 @@ section.main
 {
 	padding: 42px 0;
 
-	header .meta
+	header
 	{
-		color: #959ca0;
-		font: 700 11px/21px Verdana, sans-serif;
-		text-transform: uppercase;
-		letter-spacing: 1px;
-		margin-bottom: 14px;
+		padding-bottom: 14px;
 
-		span
+		.meta
 		{
-			font: 400 italic 15px/21px Georgia, serif;
-			text-transform: none;
-			letter-spacing: 0;
+			color: #959ca0;
+			font: 700 11px/21px Verdana, sans-serif;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+
+			span
+			{
+				font: 400 italic 15px/21px Georgia, serif;
+				text-transform: none;
+				letter-spacing: 0;
+			}
 		}
 	}
 
