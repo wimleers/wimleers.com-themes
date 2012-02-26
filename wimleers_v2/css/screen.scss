@@ -265,6 +265,7 @@ section.main
 	{
 		color: $red;
 		font: 400 14px/21px "Monaco", monospace;
+		white-space: pre-wrap;
 
 		a
 		{
@@ -274,73 +275,6 @@ section.main
 	}
 
 	sup { vertical-align: baseline; }
-
-	.body
-	{
-
-		p,
-		ul,
-		ol,
-		pre,
-		dl { padding-bottom: 14px; }
-
-		li,
-		dd { padding-bottom: 7px; }
-
-		dt { font-weight: 700; }
-
-			ul ul,
-			ol ol { padding-left: 1em; }
-
-		hr
-		{
-			border: none;
-			height: 1px;
-			background: #DAD7D3;
-			margin-bottom: 13px;
-		}
-
-		a:hover,
-		a:focus
-		{
-			color: $darkblue;
-			border-color: $blue;
-		}
-
-		a:active
-		{
-			color: $red;
-			position: relative;
-			top: 1px;
-			border: 0;
-		}
-
-		a[rel="footnote"]
-		{
-			border: none;
-			color: #A99;
-			display: inline-block;
-			font: 700 9px/10px Verdana, sans-serif;
-			padding: 1px 3px 2px;
-			position: relative;
-			top: -6px;
-			left: 1px;
-			border-radius: 10px;
-		}
-
-		a[rel="footnote"]:hover,
-		a[rel="footnote"]:focus
-		{
-			background: $blue;
-			color: #fff;
-		}
-
-		a[rel="footnote"]:active
-		{
-			background: $red;
-			color: #fff;
-		}
-	}
 
 	footer,
 	.footnotes
@@ -486,6 +420,73 @@ section.main
 		}
 	}
 }
+
+	.body
+	{
+
+		p,
+		ul,
+		ol,
+		pre,
+		dl { padding-bottom: 14px; }
+
+		li,
+		dd { padding-bottom: 7px; }
+
+		dt { font-weight: 700; }
+
+			ul ul,
+			ol ol { padding-left: 1em; }
+
+		hr
+		{
+			border: none;
+			height: 1px;
+			background: #DAD7D3;
+			margin-bottom: 13px;
+		}
+
+		a:hover,
+		a:focus
+		{
+			color: $darkblue;
+			border-color: $blue;
+		}
+
+		a:active
+		{
+			color: $red;
+			position: relative;
+			top: 1px;
+			border: 0;
+		}
+
+		a[rel="footnote"]
+		{
+			border: none;
+			color: #A99;
+			display: inline-block;
+			font: 700 9px/10px Verdana, sans-serif;
+			padding: 1px 3px 2px;
+			position: relative;
+			top: -6px;
+			left: 1px;
+			border-radius: 10px;
+		}
+
+		a[rel="footnote"]:hover,
+		a[rel="footnote"]:focus
+		{
+			background: $blue;
+			color: #fff;
+		}
+
+		a[rel="footnote"]:active
+		{
+			background: $red;
+			color: #fff;
+		}
+	}
 
 /*
 	Writings: add class="writings" to <section> tag

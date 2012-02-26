@@ -505,58 +505,14 @@ section.main {
   section.main pre,
   section.main code {
     color: #c24523;
-    font: 400 14px/21px "Monaco", monospace; }
+    font: 400 14px/21px "Monaco", monospace;
+    white-space: pre-wrap; }
     section.main pre a,
     section.main code a {
       color: #c24523;
       border-color: #f3a690; }
   section.main sup {
     vertical-align: baseline; }
-  section.main .body p,
-  section.main .body ul,
-  section.main .body ol,
-  section.main .body pre,
-  section.main .body dl {
-    padding-bottom: 14px; }
-  section.main .body li,
-  section.main .body dd {
-    padding-bottom: 7px; }
-  section.main .body dt {
-    font-weight: 700; }
-  section.main .body ul ul,
-  section.main .body ol ol {
-    padding-left: 1em; }
-  section.main .body hr {
-    border: none;
-    height: 1px;
-    background: #DAD7D3;
-    margin-bottom: 13px; }
-  section.main .body a:hover,
-  section.main .body a:focus {
-    color: #14699e;
-    border-color: #2385c2; }
-  section.main .body a:active {
-    color: #c24523;
-    position: relative;
-    top: 1px;
-    border: 0; }
-  section.main .body a[rel="footnote"] {
-    border: none;
-    color: #A99;
-    display: inline-block;
-    font: 700 9px/10px Verdana, sans-serif;
-    padding: 1px 3px 2px;
-    position: relative;
-    top: -6px;
-    left: 1px;
-    border-radius: 10px; }
-  section.main .body a[rel="footnote"]:hover,
-  section.main .body a[rel="footnote"]:focus {
-    background: #2385c2;
-    color: #fff; }
-  section.main .body a[rel="footnote"]:active {
-    background: #c24523;
-    color: #fff; }
   section.main footer,
   section.main .footnotes {
     margin-top: 7px;
@@ -648,6 +604,52 @@ section.main {
   section.main aside h1 {
     font: 400 italic 15px/21px Georgia, sans-serif;
     margin: 28px 0 7px; }
+
+.body p,
+.body ul,
+.body ol,
+.body pre,
+.body dl {
+  padding-bottom: 14px; }
+.body li,
+.body dd {
+  padding-bottom: 7px; }
+.body dt {
+  font-weight: 700; }
+.body ul ul,
+.body ol ol {
+  padding-left: 1em; }
+.body hr {
+  border: none;
+  height: 1px;
+  background: #DAD7D3;
+  margin-bottom: 13px; }
+.body a:hover,
+.body a:focus {
+  color: #14699e;
+  border-color: #2385c2; }
+.body a:active {
+  color: #c24523;
+  position: relative;
+  top: 1px;
+  border: 0; }
+.body a[rel="footnote"] {
+  border: none;
+  color: #A99;
+  display: inline-block;
+  font: 700 9px/10px Verdana, sans-serif;
+  padding: 1px 3px 2px;
+  position: relative;
+  top: -6px;
+  left: 1px;
+  border-radius: 10px; }
+.body a[rel="footnote"]:hover,
+.body a[rel="footnote"]:focus {
+  background: #2385c2;
+  color: #fff; }
+.body a[rel="footnote"]:active {
+  background: #c24523;
+  color: #fff; }
 
 /*
 	Writings: add class="writings" to <section> tag
