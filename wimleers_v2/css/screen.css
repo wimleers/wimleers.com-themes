@@ -496,24 +496,23 @@ section.main {
     border: 0; }
   section.main .body sup {
     vertical-align: baseline; }
-    section.main .body sup a {
-      background: #93cef4;
-      border: none;
-      color: #fff;
-      display: inline-block;
-      font: 700 9px/10px Verdana, sans-serif;
-      padding: 2px 4px 3px;
-      position: relative;
-      top: -10px;
-      border-radius: 10px; }
-    section.main .body sup a:hover,
-    section.main .body sup a:focus {
-      background: #2385c2;
-      color: #fff; }
-    section.main .body sup a:active {
-      background: #c24523;
-      top: -10px;
-      color: #fff; }
+  section.main .body a[rel="footnote"] {
+    border: none;
+    color: #A99;
+    display: inline-block;
+    font: 700 9px/10px Verdana, sans-serif;
+    padding: 1px 3px 2px;
+    position: relative;
+    top: -6px;
+    left: 1px;
+    border-radius: 10px; }
+  section.main .body a[rel="footnote"]:hover,
+  section.main .body a[rel="footnote"]:focus {
+    background: #2385c2;
+    color: #fff; }
+  section.main .body a[rel="footnote"]:active {
+    background: #c24523;
+    color: #fff; }
   section.main footer,
   section.main .footnotes {
     margin-top: 7px;

@@ -242,36 +242,32 @@ section.main
 			border: 0;
 		}
 
-		sup
+		sup { vertical-align: baseline; }
+
+		a[rel="footnote"]
 		{
-			vertical-align: baseline;
+			border: none;
+			color: #A99;
+			display: inline-block;
+			font: 700 9px/10px Verdana, sans-serif;
+			padding: 1px 3px 2px;
+			position: relative;
+			top: -6px;
+			left: 1px;
+			border-radius: 10px;
+		}
 
-			a
-			{
-				background: $lightblue;
-				border: none;
-				color: #fff;
-				display: inline-block;
-				font: 700 9px/10px Verdana, sans-serif;
-				padding: 2px 4px 3px;
-				position: relative;
-				top: -10px;
-				border-radius: 10px;
-			}
+		a[rel="footnote"]:hover,
+		a[rel="footnote"]:focus
+		{
+			background: $blue;
+			color: #fff;
+		}
 
-			a:hover,
-			a:focus
-			{
-				background: $blue;
-				color: #fff;
-			}
-
-			a:active
-			{
-				background: $red;
-				top: -10px;
-				color: #fff;
-			}
+		a[rel="footnote"]:active
+		{
+			background: $red;
+			color: #fff;
 		}
 	}
 
