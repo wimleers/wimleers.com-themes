@@ -481,10 +481,14 @@ section.main {
   section.main .body p,
   section.main .body ul,
   section.main .body ol,
-  section.main .body pre {
+  section.main .body pre,
+  section.main .body dl {
     padding-bottom: 14px; }
-  section.main .body li {
+  section.main .body li,
+  section.main .body dd {
     padding-bottom: 7px; }
+  section.main .body dt {
+    font-weight: 700; }
   section.main .body ul ul,
   section.main .body ol ol {
     padding-left: 1em; }

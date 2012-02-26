@@ -224,9 +224,13 @@ section.main
 		p,
 		ul,
 		ol,
-		pre { padding-bottom: 14px; }
+		pre,
+		dl { padding-bottom: 14px; }
 
-		li { padding-bottom: 7px; }
+		li,
+		dd { padding-bottom: 7px; }
+
+		dt { font-weight: 700; }
 
 			ul ul,
 			ol ol { padding-left: 1em; }
