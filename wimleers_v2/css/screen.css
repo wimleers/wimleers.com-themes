@@ -378,6 +378,29 @@ a {
   border-bottom: 1px solid #93cef4;
   color: #2385c2; }
 
+table {
+  margin: 6px 0 20px;
+  border-collapse: collapse;
+  width: 100%; }
+  table ul,
+  table ol,
+  table dl {
+    padding-left: 20px; }
+
+th,
+tr,
+td {
+  border: 1px solid #E3DBCF;
+  text-align: left; }
+
+th,
+td {
+  padding: 3px 10px;
+  vertical-align: top; }
+
+th {
+  background: #F2EEE6; }
+
 /*
 	Object oriented classes
 */
