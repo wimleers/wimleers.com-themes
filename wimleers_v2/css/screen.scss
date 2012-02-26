@@ -48,11 +48,12 @@ body
 	min-width: 960px;
 }
 
-h1 a
+h1
 {
-	color: #c24523;
 	font: 400 26px/28px "Qlassik Medium", sans-serif;
 	margin-bottom: 7px;
+
+	a { color: #c24523; }
 }
 
 /*
@@ -98,6 +99,8 @@ h1 a
 		a:hover,
 		a:focus { border-color: #c0e7ff; }
 	}
+
+	h1 { margin: 0; }
 
 	h2 { font: italic 16px/21px Georgia, serif; }
 

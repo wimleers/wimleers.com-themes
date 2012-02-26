@@ -369,10 +369,11 @@ body {
   background: #faf7f2;
   min-width: 960px; }
 
-h1 a {
-  color: #c24523;
+h1 {
   font: 400 26px/28px "Qlassik Medium", sans-serif;
   margin-bottom: 7px; }
+  h1 a {
+    color: #c24523; }
 
 /*
 	Object oriented classes
@@ -407,6 +408,8 @@ h1 a {
     .siteHead .logo a:hover,
     .siteHead .logo a:focus {
       border-color: #c0e7ff; }
+  .siteHead h1 {
+    margin: 0; }
   .siteHead h2 {
     font: italic 16px/21px Georgia, serif; }
   .siteHead nav ul {
