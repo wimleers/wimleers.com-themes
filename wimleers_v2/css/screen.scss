@@ -258,6 +258,14 @@ section.main
 			ul ul,
 			ol ol { padding-left: 1em; }
 
+		hr
+		{
+			border: none;
+			height: 1px;
+			background: #CDD1D4;
+			margin-bottom: 13px;
+		}
+
 		a:hover,
 		a:focus
 		{

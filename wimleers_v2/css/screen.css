@@ -503,6 +503,11 @@ section.main {
   section.main .body ul ul,
   section.main .body ol ol {
     padding-left: 1em; }
+  section.main .body hr {
+    border: none;
+    height: 1px;
+    background: #CDD1D4;
+    margin-bottom: 13px; }
   section.main .body a:hover,
   section.main .body a:focus {
     color: #14699e;
