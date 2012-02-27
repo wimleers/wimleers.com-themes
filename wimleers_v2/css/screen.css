@@ -481,7 +481,13 @@ th {
 	Main Section
 */
 section.main {
-  padding: 42px 0; }
+  padding: 42px 0;
+  /*
+  	Forms
+  */
+  /*
+  	Typographic Defaults
+  */ }
   section.main header {
     padding-bottom: 14px; }
     section.main header .meta {
@@ -493,6 +499,50 @@ section.main {
         font: 400 italic 15px/21px Georgia, serif;
         text-transform: none;
         letter-spacing: 0; }
+  section.main fieldset {
+    border: 1px solid #ddd;
+    border-radius: 3px; }
+  section.main .text-format-wrapper fieldset {
+    margin-bottom: 14px; }
+  section.main label {
+    display: inline-block;
+    padding: 14px 0 7px; }
+  section.main input[type="text"],
+  section.main input[type="password"],
+  section.main input[type="search"],
+  section.main input[type="submit"],
+  section.main textarea {
+    color: #777;
+    display: block;
+    font: 14px/21px Verdana, sans-serif;
+    padding: 6px 7px;
+    border-radius: 3px;
+    border: 1px solid #aaa;
+    box-shadow: inset 0 2px 3px #CCC; }
+    section.main input[type="text"]:focus,
+    section.main input[type="password"]:focus,
+    section.main input[type="search"]:focus,
+    section.main input[type="submit"]:focus,
+    section.main textarea:focus {
+      color: #404050; }
+  section.main textarea {
+    width: 504px; }
+  section.main input[type="submit"] {
+    display: inline;
+    border: 1px solid #4798ca;
+    box-shadow: inset 0 1px #a1d4f5;
+    background: #4b9acc;
+    color: #fff;
+    margin: 7px 7px 0 0; }
+  section.main input[type="submit"]:hover,
+  section.main input[type="submit"]:focus {
+    background-color: #57b3ed; }
+  section.main input[type="submit"]:active {
+    box-shadow: inset 0 2px 4px 1px rgba(0, 0, 0, 0.33);
+    background-color: #4b9acc; }
+  section.main form .description {
+    padding-top: 7px;
+    font-size: 11px; }
   section.main h2,
   section.main h3,
   section.main h4 {
