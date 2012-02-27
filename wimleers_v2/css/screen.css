@@ -797,6 +797,19 @@ section.writings {
 .comment-add {
   list-style: none;
   padding: 0 0 14px; }
+  .comment-add a {
+    display: block;
+    padding: 6px;
+    text-align: center;
+    color: #fff;
+    background: #2385c2;
+    border: 1px solid #14699e;
+    border-radius: 3px; }
+    .comment-add a:hover, .comment-add a:focus {
+      background: #14699e; }
+    .comment-add a:active {
+      background: #c24523;
+      border-color: #f3a690; }
 
 #comments article {
   padding: 7px 0; }

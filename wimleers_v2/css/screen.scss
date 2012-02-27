@@ -706,6 +706,29 @@ section.writings
 {
 	list-style: none;
 	padding: 0 0 14px;
+
+	a
+	{
+		display: block;
+		padding: 6px;
+		text-align: center;
+		color: #fff;
+		background: $blue;
+		border: 1px solid $darkblue;
+		border-radius: 3px;
+
+		&:hover,
+		&:focus
+		{
+			background: $darkblue;
+		}
+
+		&:active
+		{
+			background: $red;
+			border-color: $borderred;
+		}
+	}
 }
 
 #comments
