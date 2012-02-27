@@ -64,12 +64,9 @@ $subject = $content['comment_body']['#object']->subject;
 $comment = $content['comment_body']['#object']->comment_body['und'][0]['value'];
 $manual_subject = ($nid > 112 || strpos($comment, $subject) === 0) ? FALSE : TRUE;
 ?>
-<div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  <?php print $picture ?>
+<article class="cf <?php print $classes; ?> <?php if ($new): ?> new<?php endif; ?>"<?php print $attributes; ?>>
 
-  <?php if ($new): ?>
-    <span class="new"><?php print $new ?></span>
-  <?php endif; ?>
+  <?php print $picture ?>
 
   <?php if ($manual_subject): ?>
     <?php print render($title_prefix); ?>
@@ -77,23 +74,23 @@ $manual_subject = ($nid > 112 || strpos($comment, $subject) === 0) ? FALSE : TRU
     <?php print render($title_suffix); ?>
   <?php endif; ?>
 
-  <div class="submitted">
-    <?php print $permalink; ?>
-    <?php print $submitted; ?>
+  <div class="meta">
+	<span class="author"><?php print $author; ?></span>
+	<span class="date"><?php print format_date($node->created, 'custom', 'D j M Y') ?></span>
   </div>
 
-  <div class="content"<?php print $content_attributes; ?>>
+  <div class="body"<?php print $content_attributes; ?>>
     <?php
       // We hide the comments and links now so that we can render them later.
       hide($content['links']);
       print render($content);
     ?>
     <?php if ($signature): ?>
-    <div class="user-signature clearfix">
+    <div class="user-signature cf">
       <?php print $signature ?>
     </div>
     <?php endif; ?>
   </div>
 
   <?php print render($content['links']) ?>
-</div>
+</article>

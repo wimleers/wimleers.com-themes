@@ -628,6 +628,77 @@ section.writings
 }
 
 /*
+	Comments
+*/
+
+#comments
+{
+	article
+	{
+		padding: 7px 0;
+	}
+
+	.user-picture
+	{
+		float: left;
+		margin: 0 20px 0 -70px;
+
+		img
+		{
+			display: block;
+		}
+
+		a
+		{
+			float: left;
+			display: block;
+			border: 2px solid $lightblue;
+			margin: -2px;
+
+			&:hover
+			{
+				border-color: $darkblue;
+			}
+		}
+	}
+
+	.meta
+	{
+		padding-bottom: 14px;
+		color: #959CA0;
+
+		a
+		{
+			color: #959CA0;
+			border-color: #DAD7D3;
+
+			&:hover
+			{
+				border-color: #959CA0;
+			}
+		}
+	}
+
+	.date
+	{
+		float: right;
+	}
+
+	.links
+	{
+		list-style: none;
+		padding: 7px 0 28px;
+		margin-top: 7px;
+		border-top: 1px solid #DAD7D3;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 11px;
+		text-align: right;
+		font-weight: 700;
+	}
+}
+
+/*
 	Front (homepage): add class="front" to <body> tag
 */
 
