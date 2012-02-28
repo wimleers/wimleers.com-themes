@@ -58,12 +58,6 @@
  * @see theme_comment()
  */
 ?>
-<?php
-$nid     = $content['comment_body']['#object']->nid;
-$subject = $content['comment_body']['#object']->subject;
-$comment = $content['comment_body']['#object']->comment_body['und'][0]['value'];
-$manual_subject = ($nid > 112 || strpos($comment, $subject) === 0) ? FALSE : TRUE;
-?>
 <article class="cf <?php print $classes; ?> <?php if ($new): ?> new<?php endif; ?>"<?php print $attributes; ?>>
 
   <?php print $picture ?>
