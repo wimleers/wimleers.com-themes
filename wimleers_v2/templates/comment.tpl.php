@@ -76,7 +76,7 @@ $manual_subject = ($nid > 112 || strpos($comment, $subject) === 0) ? FALSE : TRU
 
   <div class="meta">
 	<span class="author"><?php print $author; ?></span>
-	<span class="date"><?php print format_date($node->created, 'custom', 'D j M Y') ?></span>
+	<span class="date"><?php print $permalink ?></span>
   </div>
 
   <div class="body"<?php print $content_attributes; ?>>

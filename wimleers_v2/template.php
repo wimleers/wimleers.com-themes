@@ -58,6 +58,14 @@ function wimleers_v2_preprocess_node(&$variables) {
   }
 }
 
+function wimleers_v2_preprocess_comment(&$variables) {
+  $comment = $variables['elements']['#comment'];
+  $node = $variables['elements']['#node'];
+
+  $uri = entity_uri('comment', $comment);
+  $uri['options'] += array('attributes' => array('class' => 'permalink', 'rel' => 'bookmark'));
+  $variables['permalink'] = l($variables['created'], $uri['path'], $uri['options']);
+}
 
 function wimleers_v2_preprocess_page(&$variables) {
   // Detect view pages.
