@@ -22,4 +22,9 @@
   <section id="comments">
     <?php print render($content['comments']); ?>
   </section>
+  <?php if ($node->comment_count > 0): ?>
+    <section id="links-below-comments">
+      <?php print render($content['links']['comment']); ?>
+    </section>
+  <?php endif; ?>
 </article>

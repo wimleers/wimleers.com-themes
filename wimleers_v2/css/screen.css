@@ -811,40 +811,48 @@ section.writings {
       background: #c24523;
       border-color: #f3a690; }
 
-#comments article {
-  padding: 7px 0; }
-#comments .user-picture {
-  float: left;
-  margin: 0 20px 0 -70px; }
-  #comments .user-picture img {
-    display: block; }
-  #comments .user-picture a {
+#comments {
+  margin-bottom: 50px; }
+  #comments article {
+    padding: 35px 0 7px; }
+  #comments .user-picture {
     float: left;
-    display: block;
-    border: 2px solid #93cef4;
-    margin: -2px; }
-    #comments .user-picture a:hover {
-      border-color: #14699e; }
-#comments .meta {
-  padding-bottom: 14px;
-  color: #959CA0; }
-  #comments .meta a {
-    color: #959CA0;
-    border-color: #DAD7D3; }
-    #comments .meta a:hover {
-      border-color: #959CA0; }
-#comments .date {
-  float: right; }
-#comments .links {
-  list-style: none;
-  padding: 7px 0 28px;
-  margin-top: 7px;
-  border-top: 1px solid #DAD7D3;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 11px;
-  text-align: right;
-  font-weight: 700; }
+    margin: 0 20px 0 -70px; }
+    #comments .user-picture img {
+      display: block; }
+    #comments .user-picture a {
+      float: left;
+      display: block;
+      border: 2px solid #93cef4;
+      margin: -2px; }
+      #comments .user-picture a:hover {
+        border-color: #14699e; }
+  #comments .meta {
+    padding-bottom: 14px;
+    color: #959CA0; }
+    #comments .meta a {
+      color: #959CA0;
+      border-color: #DAD7D3; }
+      #comments .meta a:hover {
+        border-color: #959CA0; }
+  #comments .date {
+    float: right; }
+  #comments .links {
+    list-style: none;
+    padding: 7px 0;
+    margin-top: 7px;
+    border-top: 1px dotted #DAD7D3;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 11px;
+    text-align: right;
+    font-weight: 700; }
+  #comments .links li {
+    display: inline;
+    padding-left: 1em; }
+  #comments .indented {
+    padding-left: 25px;
+    border-left: 1px dotted #c2c2c2; }
 
 /*
 	Front (homepage): add class="front" to <body> tag
