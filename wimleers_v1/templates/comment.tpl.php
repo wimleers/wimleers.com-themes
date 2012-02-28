@@ -1,7 +1,8 @@
 <?php
+$nid     = $content['comment_body']['#object']->nid;
 $subject = $content['comment_body']['#object']->subject;
 $comment = $content['comment_body']['#object']->comment_body['und'][0]['value'];
-$manual_subject = (strpos($comment, $subject) === 0) ? FALSE : TRUE;
+$manual_subject = ($nid > 112 || strpos($comment, $subject) === 0) ? FALSE : TRUE;
 ?>
 <div class="<?php print $classes . ' ' . $zebra; ?>"<?php print $attributes; ?>>
 
