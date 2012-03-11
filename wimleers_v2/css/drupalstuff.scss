@@ -70,43 +70,50 @@ html.js .js-hide { display: none; }
 */
 
 div.messages {
-  background-position: 8px 8px; /* LTR*/
-  background-repeat: no-repeat;
-  border: 1px solid;
-  margin: 6px 0;
-  padding: 10px 10px 10px 50px; /* LTR*/
+	border: 1px solid;
+	border-radius: 3px;
+	margin: 6px 0;
+	padding: 10px 20px; /* LTR*/
+	box-shadow: 0 2px 1px rgba(0,0,0,.33);
+
+	ul
+	{
+		margin: 0 0 0 1em; /* LTR*/
+		padding: 0;
+
+		li { list-style-type: disc; }
+	}
 }
 
-div.status { border-color: #be7; }
+	.ok { color: #234600; }
 
-div.status,
-.ok { color: #234600; }
+	div.status,
+	table tr.ok
+	{
+		border-color: #185140;
+		background: #24775E;
+		color: #fff;
+	}
 
-div.status,
-table tr.ok { background-color: #f8fff0; }
+	.warning { color: #840; }
 
-div.warning { border-color: #ed5; }
+	div.warning,
+	table tr.warning
+	{
+		border-color: #C6A73B;
+		background: #EC5;
+		color: #543F2A;
+	}
 
-div.warning,
-.warning { color: #840; }
+	.error { color: #8c2e0b; }
 
-div.warning,
-table tr.warning { background-color: #fffce5; }
-
-div.error { border-color: #ed541d; }
-
-div.error, .error { color: #8c2e0b; }
-
-div.error, table tr.error { background-color: #fef5f1; }
-
-div.error p.error { color: #333; }
-
-div.messages ul {
-  margin: 0 0 0 1em; /* LTR*/
-  padding: 0;
-}
-
-div.messages ul li { list-style-image: none; }
+	div.error,
+	table tr.error
+	{
+		border-color: #A02113;
+		background: #BA2716;
+		color: #fff;
+	}
 
 
 /*
