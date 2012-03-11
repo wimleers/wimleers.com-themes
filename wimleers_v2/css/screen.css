@@ -372,6 +372,8 @@ h1 {
   h1 a {
     color: #c24523;
     border: none; }
+    h1 a:hover {
+      color: #9B2B0C; }
 
 a {
   text-decoration: none;

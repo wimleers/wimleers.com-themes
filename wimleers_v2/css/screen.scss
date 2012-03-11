@@ -55,6 +55,11 @@ h1
 	{
 		color: #c24523;
 		border: none;
+
+		&:hover
+		{
+			color: #9B2B0C;
+		}
 	}
 }
 
@@ -805,7 +810,7 @@ section.writings
 		padding-left: 1em;
 	}
 
-	.indented 
+	.indented
 	{
 		padding-left: 25px;
 		border-left: 1px dotted #c2c2c2;
