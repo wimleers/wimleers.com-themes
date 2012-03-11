@@ -369,11 +369,6 @@ body {
 h1 {
   font: 400 26px/28px "Qlassik Medium", sans-serif;
   margin-bottom: 7px; }
-  h1 a {
-    color: #c24523;
-    border: none; }
-    h1 a:hover {
-      color: #9B2B0C; }
 
 a {
   text-decoration: none;
@@ -545,6 +540,11 @@ section.main {
   section.main form .description {
     padding-top: 7px;
     font-size: 11px; }
+  section.main h1 a {
+    color: #c24523;
+    border: none; }
+    section.main h1 a:hover {
+      color: #9B2B0C; }
   section.main h2,
   section.main h3,
   section.main h4 {
@@ -815,31 +815,35 @@ section.writings {
 
 #comments {
   margin-bottom: 50px; }
-  #comments article {
-    padding: 35px 0 7px; }
-  #comments .user-picture {
+  #comments .indented {
+    padding-left: 25px;
+    border-left: 1px dotted #c2c2c2; }
+
+.comment {
+  padding: 35px 0 7px; }
+  .comment .user-picture {
     float: left;
     margin: 0 20px 0 -70px; }
-    #comments .user-picture img {
+    .comment .user-picture img {
       display: block; }
-    #comments .user-picture a {
+    .comment .user-picture a {
       float: left;
       display: block;
       border: 2px solid #93cef4;
       margin: -2px; }
-      #comments .user-picture a:hover {
+      .comment .user-picture a:hover {
         border-color: #14699e; }
-  #comments .meta {
+  .comment .meta {
     padding-bottom: 14px;
     color: #959CA0; }
-    #comments .meta a {
+    .comment .meta a {
       color: #959CA0;
       border-color: #DAD7D3; }
-      #comments .meta a:hover {
+      .comment .meta a:hover {
         border-color: #959CA0; }
-  #comments .date {
+  .comment .date {
     float: right; }
-  #comments .links {
+  .comment .links {
     list-style: none;
     padding: 7px 0;
     margin-top: 7px;
@@ -849,12 +853,9 @@ section.writings {
     font-size: 11px;
     text-align: right;
     font-weight: 700; }
-  #comments .links li {
+  .comment .links li {
     display: inline;
     padding-left: 1em; }
-  #comments .indented {
-    padding-left: 25px;
-    border-left: 1px dotted #c2c2c2; }
 
 /*
 	Front (homepage): add class="front" to <body> tag
