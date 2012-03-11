@@ -105,7 +105,10 @@ div.messages {
 		color: #543F2A;
 	}
 
-	.error { color: #8c2e0b; }
+	.error
+	{
+		color: #8c2e0b;
+	}
 
 	div.error,
 	table tr.error
