@@ -102,10 +102,8 @@ table tr.warning {
   background: #EC5;
   color: #543F2A; }
 
-.error,
-input.error {
-  color: #8c2e0b;
-  border-color: #A02113; }
+.error {
+  color: #8c2e0b; }
 
 div.error,
 table tr.error {
@@ -549,7 +547,8 @@ section.main {
   section.main code {
     color: #c24523;
     font: 400 14px/21px "Monaco", monospace;
-    white-space: pre-wrap; }
+    white-space: pre-wrap;
+    word-wrap: break-word; }
     section.main pre a,
     section.main code a {
       color: #c24523;
