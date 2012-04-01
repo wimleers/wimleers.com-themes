@@ -92,7 +92,7 @@ function wimleers_v2_preprocess_page(&$variables) {
     $variables['downloads'] = field_view_field('node', $node, 'upload');
   }
     
-  if (isset($variables['node'])) {
+  if (isset($variables['node']) && $node->type != 'page') {
     // Hack to automatically mark "blog" as active when reading a blog post,
     // "articles" when reading an article and "talks" when reading a talk.
     $old_get_q = $_GET['q'];
