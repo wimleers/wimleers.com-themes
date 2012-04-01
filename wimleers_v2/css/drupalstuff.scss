@@ -85,38 +85,39 @@ div.messages {
 	}
 }
 
-	.ok { color: #234600; }
+.ok { color: #234600; }
 
-	div.status,
-	table tr.ok
-	{
-		border-color: #185140;
-		background: #24775E;
-		color: #fff;
-	}
+div.status,
+table tr.ok
+{
+	border-color: #185140;
+	background: #24775E;
+	color: #fff;
+}
 
-	.warning { color: #840; }
+.warning { color: #840; }
 
-	div.warning,
-	table tr.warning
-	{
-		border-color: #C6A73B;
-		background: #EC5;
-		color: #543F2A;
-	}
+div.warning,
+table tr.warning
+{
+	border-color: #C6A73B;
+	background: #EC5;
+	color: #543F2A;
+}
 
-	.error
-	{
-		color: #8c2e0b;
-	}
+.error
+{
+	color: #8c2e0b;
+}
 
-	div.error,
-	table tr.error
-	{
-		border-color: #A02113;
-		background: #BA2716;
-		color: #fff;
-	}
+div.error,
+table tr.error
+{
+	border-color: #A02113;
+	background: #BA2716;
+	color: #fff;
+}
+
 
 
 /*
