@@ -17,12 +17,17 @@
     ?>
   </div>
   <section id="links">
-    <?php print render($content['links']); ?>
+    <?php
+    if ($is_comment_reply_page) {
+      hide($content['links']['comment']);
+    }
+    print render($content['links']);
+    ?>
   </section>
   <section id="comments">
     <?php print render($content['comments']); ?>
   </section>
-  <?php if ($node->comment_count > 0): ?>
+  <?php if (!$is_comment_reply_page && $node->comment_count >= 5): ?>
     <section id="links-below-comments">
       <?php print render($content['links']['comment']); ?>
     </section>

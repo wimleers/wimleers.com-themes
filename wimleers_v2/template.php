@@ -54,6 +54,9 @@ function wimleers_v2_css_alter(&$css) {
 function wimleers_v2_preprocess_node(&$variables) {
   $node = $variables['node'];
 
+  $router_item = menu_get_item();
+  $variables['is_comment_reply_page'] = $router_item['page_callback'] == 'comment_reply';
+
   if (in_array($node->type, array('blog', 'article', 'talk', 'project'))) {
     $variables['meta'] = t('published <span>on</span> !date', array('!content-type' => $node_type->name, '!date' => format_date($node->created, 'custom', 'F j, Y')));
   }
