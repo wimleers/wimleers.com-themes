@@ -1,0 +1,1 @@
+views-view-table--writings.tpl.php
