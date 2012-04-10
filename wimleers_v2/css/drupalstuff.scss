@@ -2,6 +2,43 @@
 	Drupal core: system.base.css
 */
 
+
+/**
+	Collapsible fieldsets.
+*/
+
+html.js {
+	fieldset.collapsed {
+		border-bottom-width: 0;
+		border-left-width: 0;
+		border-right-width: 0;
+		height: 1em;
+
+		.fieldset-wrapper { display: none; }
+	}
+}
+fieldset.collapsible {
+	position: relative;
+
+	.fieldset-legend { display: block; }
+}
+
+
+/**
+	Inline items.
+*/
+.container-inline {
+	div, label {
+		display: inline;
+	}
+
+	/* Fieldset contents always need to be rendered as block. */
+	.fieldset-wrapper {
+		display: block;
+	}
+}
+
+
 /*
 	Prevent text wrapping.
 */

@@ -9,6 +9,32 @@
 /*
 	Drupal core: system.base.css
 */
+/**
+	Collapsible fieldsets.
+*/
+html.js fieldset.collapsed {
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  height: 1em; }
+  html.js fieldset.collapsed .fieldset-wrapper {
+    display: none; }
+
+fieldset.collapsible {
+  position: relative; }
+  fieldset.collapsible .fieldset-legend {
+    display: block; }
+
+/**
+	Inline items.
+*/
+.container-inline {
+  /* Fieldset contents always need to be rendered as block. */ }
+  .container-inline div, .container-inline label {
+    display: inline; }
+  .container-inline .fieldset-wrapper {
+    display: block; }
+
 /*
 	Prevent text wrapping.
 */
