@@ -20,7 +20,7 @@
 	that you can use the JS to control visibility and avoid flicker.
 */
 html.js .js-hide {
-  display: none; }
+  display: none !important; }
 
 /*
 	Hide elements from all users.
