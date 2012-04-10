@@ -284,3 +284,12 @@ function wimleers_v2_links__meta_menu($variables) {
 
   return $output;
 }
+
+function wimleers_v2_form($variables) {
+  // @see https://github.com/wimleers/wimleers.com-themes/issues/2.
+  if ($variables['element']['#id'] == 'comment-form') {
+    $variables['element']['#attributes']['class'][] = 'g9';
+  }
+
+  return theme_form($variables);
+}
