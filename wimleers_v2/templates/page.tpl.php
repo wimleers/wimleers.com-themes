@@ -150,6 +150,9 @@
       <?php endif; ?>
       <h1>Hot topics</h1>
       <?php print $hot_topics_menu; ?>
+      <?php if ($page['sidebar']): ?>
+        <?php print render($page['sidebar']) ?>
+      <?php endif; ?>
     </aside>
 
     <?php if ($node): ?>

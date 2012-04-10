@@ -10,7 +10,6 @@ regions[help] = Help
 regions[content] = Content
 regions[sidebar] = Sidebar
 regions[footer] = Footer
-regions_hidden[] = sidebar
 
 features[] = name
 features[] = slogan
