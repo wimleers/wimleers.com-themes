@@ -3,6 +3,7 @@
 
 define('MENU_META', 'menu-meta');
 define('MENU_HOT_TOPICS', 'menu-hot-topics');
+define('PATH_WORK_PAGE', 'node/132');
 
 /**
  * Purge needless XHTML stuff.
@@ -96,12 +97,25 @@ function wimleers_v2_preprocess_page(&$variables) {
   if (isset($node->upload)) {
     $variables['downloads'] = field_view_field('node', $node, 'upload');
   }
-    
+
   if (isset($variables['node']) && $node->type != 'page') {
     // Hack to automatically mark "blog" as active when reading a blog post,
-    // "articles" when reading an article and "talks" when reading a talk.
+    // "articles" when reading an article and "talks" when reading a talk. It
+    // also marks "work" as active when looking at work-related content types.
     $old_get_q = $_GET['q'];
     $_GET['q'] = $node->type;
+    if (in_array($node->type, array('client', 'project', 'demo'))) {
+      $_GET['q'] = PATH_WORK_PAGE;
+    }
+    $variables['main_menu'] = theme('links__system_main_menu', array('links' => $variables['main_menu']));
+    $_GET['q'] = $old_get_q;
+  }
+  else if (strpos($_GET['q'], 'demo/hierarchical-select') === 0 || in_array($_GET['q'], array('work/project', 'work/client'))) {
+    // Hack to auomtatically mark "work" as active when looking at the
+    // Hierarchical Select demo, which does not consist of nodes, but is a
+    // custom module.
+    $old_get_q = $_GET['q'];
+    $_GET['q'] = PATH_WORK_PAGE;
     $variables['main_menu'] = theme('links__system_main_menu', array('links' => $variables['main_menu']));
     $_GET['q'] = $old_get_q;
   }
