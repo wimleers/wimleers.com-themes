@@ -82,7 +82,9 @@
   </nav>
 </header>
 
-<?php if ($is_front || $is_view_page): ?>
+
+<?php /* First layout. */ ?>
+<?php if ($is_front || ($is_view_page && $is_writings_view)): ?>
   <section class="main writings c16 cf">
     <?php if ($is_front) : ?>
       <div class="cf">
@@ -95,10 +97,6 @@
           <p style="color:#C24523">New design: <em>beta</em>! <span style="font-size:80%">(Release early, release often!)</span></p>
         </article>
       </div>
-    <?php elseif ($is_tags_page): ?>
-      <header>
-        <h1><?php print $title ?></h1>
-      </header>
     <?php endif; ?>
       <div class="body">
         <section class="g10">
@@ -115,7 +113,8 @@
   </section>
 
 
-<?php elseif($is_demo_page): ?>
+<?php /* Second layout. */ ?>
+<?php elseif($is_demo_page || ($is_view_page && !$is_writings_view)): ?>
 
 
   <section class="main c16 cf">
@@ -137,6 +136,7 @@
   </section>
 
 
+<?php /* Third layout. */ ?>
 <?php else: ?>
 
 

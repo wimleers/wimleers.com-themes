@@ -74,10 +74,15 @@ function wimleers_v2_preprocess_comment(&$variables) {
 function wimleers_v2_preprocess_page(&$variables) {
   // Detect view pages.
   $router_item = menu_get_item();
-  $variables['is_view_page'] = $router_item['page_callback'] == 'views_page';
+  $is_view_page = $router_item['page_callback'] == 'views_page';
+  $variables['is_view_page'] = $is_view_page;
   $variables['is_tags_page'] = strstr(drupal_get_path_alias($_GET["q"]), 'tags/');
   $variables['is_demo_page'] = arg(0) == 'demo';
-  
+  if ($is_view_page) {
+    $view = views_get_view($router_item['page_arguments'][0]);
+    $variables["is_{$view->tag}_view"] = TRUE;
+  }
+
 
   $node = $variables['node'];
 
