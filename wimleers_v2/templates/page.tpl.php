@@ -88,14 +88,9 @@
   <section class="main writings c16 cf">
     <?php if ($is_front) : ?>
       <div class="cf">
-        <article class="g7 pre2 intro">
-          <p>Hello! My name is Wim and I'm interested in
-          <a href="http://en.wikipedia.org/wiki/Web_Performance_Optimization">WPO</a>,
-          <a href="http://drupal.org">Drupal</a> and data mining. I've worked
-          on <a href="http://facebook.com/careers">Facebook</a>'s Site Speed
-          team. And I <em>love</em> llamas.</p>
-          <p style="color:#C24523">New design: <em>beta</em>! <span style="font-size:80%">(Release early, release often!)</span></p>
-        </article>
+        <?php if ($page['intro']): ?>
+          <?php print render($page['intro']) ?>
+        <?php endif; ?>
       </div>
     <?php endif; ?>
       <div class="body">
