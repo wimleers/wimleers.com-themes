@@ -118,14 +118,15 @@
 
 
   <section class="main c16 cf">
-    <?php print $messages; ?>
-    <header class="g3">
+    <aside class="g3">
+      <?php print $messages; ?>
+      <?php print $breadcrumb; ?>
+    </aside>
+    <article class="g12">
+      <header>
       <?php print render($title_prefix); ?>
       <?php if ($title): ?><h1><?php print $title; ?></h1><?php endif; ?>
       <?php print render($title_suffix); ?>
-    </header>
-    <article class="g12">
-      <header>
       </header>
       <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
       <?php print render($page['help']); ?>
@@ -143,9 +144,7 @@
   <section class="main c16 cf">
     <aside class="g7">
       <?php print $messages; ?>
-      <!--
-      <p class="breadcrumb"><?php print $breadcrumb; ?></p>
-      -->
+      <?php print $breadcrumb; ?>
       <?php if ($tags): ?>
         <h1>This <?php print $node_type; ?> is about</h1>
         <?php print render($tags); ?>

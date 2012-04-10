@@ -133,15 +133,72 @@ function wimleers_v2_preprocess_page(&$variables) {
 function wimleers_v2_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
   if (!empty($breadcrumb)) {
+    $path = request_path();
+    $parts = explode('/', $path);
 
-    // Adding the title of the current page to the breadcrumb.
-    $breadcrumb[] = drupal_get_title();
-    
+    // If we're looking at the /work, /about or /contact pages, return the
+    // empty string: no breadcrumbs on the main pages! Also: search results.
+    if (in_array($path, array('work', 'about', 'contact', 'wimsical')) || strstr($path, 'search/')) {
+      return '';
+    }
+
+    // First, build the proper trail, but exclude the leading "Home" link.
+    $breadcrumb = array();
+    $router_item = menu_get_item();
+    $is_node_page = $router_item['page_callback'] == 'node_page_view';
+    $is_view_page = $router_item['page_callback'] == 'views_page';
+    // Breadcrumbs for nodes.
+    // if ($is_node_page && count($parts) >= 2 && in_array($parts[0], array('blog', 'article', 'talk', 'project', 'client', 'demo'))) {
+    if ($is_node_page && count($parts) >= 2 && in_array($router_item['page_arguments'][0]->type, array('blog', 'article', 'talk', 'project', 'client', 'demo'))) {
+      switch ($router_item['page_arguments'][0]->type) {
+        case 'blog':
+          $breadcrumb[] = l('Blog', 'blog');
+          break;
+        case 'article':
+          $breadcrumb[] = l('Articles', 'article');
+          break;
+        case 'talk':
+          $breadcrumb[] = l('Talks', 'talk');
+          break;
+        case 'project':
+          $breadcrumb[] = l('Work', 'work');
+          $breadcrumb[] = l('Projects', 'work/project');
+          break;
+        case 'client':
+          $breadcrumb[] = l('Work', 'work');
+          $breadcrumb[] = l('Clients', 'work/client');
+          break;
+        case 'demo':
+          $breadcrumb[] = l('Work', 'work');
+          $breadcrumb[] = l('Demos', 'demo');
+          break;
+      }
+    }
+    // One-off cases.
+    if (in_array($path, array('demo', 'work/project', 'work/client'))) {
+      $breadcrumb[] = l('Work', 'work');
+    }
+    elseif (strstr($path, 'demo/hierarchical-select')) {
+      $breadcrumb[] = l('Work', 'work');
+      $breadcrumb[] = l('Demos', 'demo');
+    }
+
+    // Secondly: add the title of the current page to the breadcrumb.
+    $title = drupal_get_title();
+    if (drupal_strlen($title) > 25) {
+      $title = drupal_substr($title, 0, 25) . '…';
+    }
+    $breadcrumb[] = $title;
+
+    if (empty($breadcrumb)) {
+      return '';
+    }
+
     // Provide a navigational heading to give context for breadcrumb links to
     // screen-reader users. Make the heading invisible with .element-invisible.
     $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
 
-    $output .= '<div class="breadcrumb">' . implode(' / ', $breadcrumb) . '</div>';
+    $output .= '<div class="breadcrumb">/ ' . implode(' / ', $breadcrumb) . '</div>';
     return $output;
   }
 }
