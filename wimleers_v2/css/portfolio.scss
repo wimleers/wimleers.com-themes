@@ -1,0 +1,14 @@
+.node-client, .node-project {
+	.field {
+		margin: 0 0 1.2em;
+	}
+}
+
+.views-exposed-form {
+	.views-exposed-widget, label, .views-widget {
+		float: left;
+	}
+	label, .views-widget {
+		padding: 14px 7px 7px;
+	}
+}

@@ -360,6 +360,14 @@ h1 .amp, h2 .amp, h3 .amp, h4 .amp, h5 .amp, h6 .amp {
 .cf:after {
   clear: both; }
 
+.node-client .field, .node-project .field {
+  margin: 0 0 1.2em; }
+
+.views-exposed-form .views-exposed-widget, .views-exposed-form label, .views-exposed-form .views-widget {
+  float: left; }
+.views-exposed-form label, .views-exposed-form .views-widget {
+  padding: 14px 7px 7px; }
+
 /*
 	Colors for SCSS
 */
