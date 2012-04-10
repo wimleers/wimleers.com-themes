@@ -190,10 +190,10 @@
     <nav class="g6">
       <ul>
         <li><a href="https://twitter.com/wimleers" rel="me">Twitter</a></li>
-        <li><a href="http://linkedin.com/in/wimleers" rel="me">LinkedIn</a></li>
+        <li><a href="https://linkedin.com/in/wimleers" rel="me">LinkedIn</a></li>
         <li><a href="https://github.com/wimleers" rel="me">Github</a></li>
-        <li><a href="http://drupal.org/user/99777" rel="me">Drupal.org</a></li>
-        <li><a href="http://pinboard.in/u:wimleers/" rel="me">Pinboard</a></li>
+        <li><a href="https://drupal.org/user/99777" rel="me">Drupal.org</a></li>
+        <li><a href="https://pinboard.in/u:wimleers/" rel="me">Pinboard</a></li>
       </ul>
     </nav>
   </div>
