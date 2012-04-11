@@ -565,6 +565,12 @@ section.main
 		}
 	}
 
+	.comment-form
+	{
+		ul ul,
+		ol ol { padding-left: 2em; }
+	}
+
 /*
 	Writings: add class="writings" to <section> tag
 */

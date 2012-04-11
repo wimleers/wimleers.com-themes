@@ -755,6 +755,10 @@ section.main {
   background: #c24523;
   color: #fff; }
 
+.comment-form ul ul,
+.comment-form ol ol {
+  padding-left: 2em; }
+
 /*
 	Writings: add class="writings" to <section> tag
 */
