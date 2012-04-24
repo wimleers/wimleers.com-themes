@@ -323,11 +323,21 @@ section.main
 	}
 
 	h2,
-	h3,
-	h4
+	h3
 	{
 		padding: 7px 0;
 		font: 20px/21px "Qlassik Medium", sans-serif;
+	}
+
+	h3,
+	h4
+	{
+		padding: 14px 0;
+	}
+
+	h4
+	{
+		font: 18px/21px "Helvetica Neue", sans-serif;
 	}
 
 	blockquote
