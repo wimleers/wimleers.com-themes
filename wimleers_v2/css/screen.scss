@@ -573,6 +573,29 @@ section.main
 			background: $red;
 			color: #fff;
 		}
+
+		a[rel="original-image"]
+		{
+			display: inline-block;
+			border: 3px solid #fff;
+			box-shadow: 0 0 3px 1px rgba(0,0,0,.33);
+			-webkit-transition: all .3s ease-out;
+			   -moz-transition: all .3s ease-out;
+			        transition: all .3s ease-out;
+
+			img
+			{
+				display: block;
+			}
+
+			&:hover
+			{
+				-webkit-transform: rotate(2deg) scale(1.05);
+				   -moz-transform: rotate(2deg) scale(1.05);
+				        transform: rotate(2deg) scale(1.05);
+				box-shadow: 0 0 8px 0 rgba(0,0,0,.28);
+			}
+		}
 	}
 
 	.comment-form
