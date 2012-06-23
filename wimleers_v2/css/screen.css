@@ -719,13 +719,24 @@ section.main {
       color: #9B2B0C; }
   section.main h2,
   section.main h3 {
-    padding: 7px 0;
+    padding: 21px 0;
     font: 20px/21px "Qlassik Medium", sans-serif; }
-  section.main h3,
-  section.main h4 {
-    padding: 14px 0; }
-  section.main h4 {
-    font: 18px/21px "Helvetica Neue", sans-serif; }
+  section.main h3 {
+    padding: 7px 0;
+    color: #6e767b; }
+  section.main h4,
+  section.main h5,
+  section.main h6 {
+    font: 600 14px/21px Verdana, sans-serif;
+    padding: 7px 0; }
+  section.main h5,
+  section.main h6 {
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0 0 7px; }
+  section.main h6 {
+    color: #6e767b; }
   section.main blockquote {
     font: 400 italic 15px/21px Georgia, sans-serif;
     padding: 0 40px 0; }
