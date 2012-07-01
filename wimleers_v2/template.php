@@ -58,7 +58,7 @@ function wimleers_v2_preprocess_node(&$variables) {
   $variables['is_comment_reply_page'] = $router_item['page_callback'] == 'comment_reply';
 
   if (in_array($node->type, array('blog', 'article', 'talk', 'project'))) {
-    $variables['meta'] = t('published <span>on</span> !date', array('!content-type' => $node_type->name, '!date' => format_date($node->created, 'custom', 'F j, Y')));
+    $variables['meta'] = t('published <span>on</span> !date', array('!date' => format_date($node->created, 'custom', 'F j, Y')));
   }
 }
 
@@ -88,7 +88,9 @@ function wimleers_v2_preprocess_page(&$variables) {
   }
 
 
-  $node = $variables['node'];
+  if (isset($variables['node'])) {
+    $node = $variables['node'];
+  }
 
   if (isset($node->type)) {
     $node_type = node_type_get_type($node);
