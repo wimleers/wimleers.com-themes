@@ -126,9 +126,7 @@
       <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
       <?php print render($page['help']); ?>
       <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
-	  <?php if($tabs): ?><div class="tabsContent body"><?php endif; ?>
       <?php print render($page['content']); ?>
-	  <?php if($tabs): ?></div><?php endif; ?>
     </article>
     </div>
   </section>
@@ -158,7 +156,7 @@
     </aside>
 
     <?php if ($node): ?>
-      <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+      <?php if ($tabs): ?><div class="tabs g9"><?php print render($tabs); ?></div><?php endif; ?>
       <?php print render($page['help']); ?>
       <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
       <?php print render($page['content']); ?>
@@ -169,7 +167,7 @@
           <?php if ($title): ?><h1><?php print $title; ?></h1><?php endif; ?>
           <?php print render($title_suffix); ?>
         </header>
-        <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+        <?php if ($tabs): ?><div class="tabs g9"><?php print render($tabs); ?></div><?php endif; ?>
         <?php print render($page['help']); ?>
         <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
         <?php print render($page['content']); ?>
