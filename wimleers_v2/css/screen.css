@@ -861,6 +861,12 @@ section.main {
   padding-left: 2em; }
 
 /*
+	Content Overview List
+*/
+section.main .view-content h2 {
+  padding: 7px 0; }
+
+/*
 	Writings: add class="writings" to <section> tag
 */
 section.writings {
