@@ -582,6 +582,9 @@ section.main {
   */
   /*
   	Typographic Defaults
+  */
+  /*
+  	Search
   */ }
   section.main header {
     padding-bottom: 14px; }
@@ -769,6 +772,25 @@ section.main {
   section.main aside h1 {
     font: 400 italic 15px/21px Georgia, sans-serif;
     margin: 28px 0 7px; }
+  section.main .search-form .form-type-textfield label {
+    display: block; }
+  section.main .search-form .form-type-textfield .form-text {
+    display: inline; }
+  section.main .search-advanced {
+    margin-top: 16px;
+    padding: 8px 20px; }
+    section.main .search-advanced .fieldset-title {
+      color: #858381;
+      border-color: #C6C5C3; }
+  section.main .search-results {
+    list-style: none; }
+    section.main .search-results li {
+      padding: 8px 0; }
+      section.main .search-results li:first-child {
+        padding-top: 0; }
+    section.main .search-results .search-info {
+      padding: 4px 0;
+      color: #858381; }
 
 .body p,
 .body ul,

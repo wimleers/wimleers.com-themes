@@ -526,6 +526,54 @@ section.main
 			margin: 28px 0 7px;
 		}
 	}
+
+	/*
+		Search
+	*/
+
+	.search-form .form-type-textfield label
+	{
+		display: block;
+	}
+
+	.search-form .form-type-textfield .form-text
+	{
+		display: inline;
+	}
+
+	.search-advanced
+	{
+		margin-top: 16px;
+		padding: 8px 20px;
+
+		.fieldset-title
+		{
+			color: #858381;
+			border-color: #C6C5C3;
+		}
+	}
+
+	.search-results
+	{
+		list-style: none;
+
+		li
+		{
+			padding: 8px 0;
+
+			&:first-child
+			{
+				padding-top: 0;
+			}
+		}
+
+		.search-info
+		{
+			padding: 4px 0;
+			color: #858381;
+		}
+	}
+
 }
 
 	.body
