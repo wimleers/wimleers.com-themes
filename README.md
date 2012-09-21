@@ -12,10 +12,10 @@ In Drupal 7, it now requires far less code thanks to Drupal's *subtheme* functio
 
 ## wimleers_v2
 
-**Not yet available.**
-
-This theme will be designed by a *professional* designer :)
+The new <http://wimleers.com>, designed in 2011 & 2012 by the awesome [Xavier Bertels][3] (the first time I've hired a professional designer!). The logo was designed by the at least equally awesome [Ine Spee][4]. Both of them are from my hometown of Hasselt, Belgium :)
 
 
 [1]: http://drupal.org
 [2]: http://buytaert.net/garland
+[3]: http://xavierbertels.com/
+[4]: http://inespee.com/
