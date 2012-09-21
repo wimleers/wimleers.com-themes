@@ -135,6 +135,14 @@ function wimleers_v2_preprocess_page(&$variables) {
   $variables['builtin_search'] = drupal_get_form('search_block_form');
 }
 
+function wimleers_v2_preprocess_search_result(&$variables) {
+  // Don't print HH:MM.
+  $variables['info_split']['date'] = format_date($variables['result']['date'], 'custom', 'F j, Y');
+  // Don't print the user, which is always "Wim Leers".
+  unset($variables['info_split']['user']);
+  $variables['info'] = implode(' – ', $variables['info_split']);
+}
+
 function wimleers_v2_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
   if (!empty($breadcrumb)) {
