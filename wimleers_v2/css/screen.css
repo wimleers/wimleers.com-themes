@@ -459,7 +459,8 @@ body {
   font: 14px/21px Verdana, sans-serif;
   color: #404050;
   background: #faf7f2;
-  min-width: 960px; }
+  min-width: 960px;
+  -webkit-text-size-adjust: 100%; }
 
 h1 {
   font: 400 26px/28px "Qlassik Medium", sans-serif;
