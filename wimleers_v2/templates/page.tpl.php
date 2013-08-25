@@ -140,36 +140,36 @@
     <aside class="g7">
       <?php print $messages; ?>
       <?php print $breadcrumb; ?>
-      <?php if ($tags): ?>
+      <?php if (isset($tags)): ?>
         <h1>This <?php print $node_type; ?> is about</h1>
         <?php print render($tags); ?>
       <?php endif; ?>
-      <?php if ($downloads): ?>
+      <?php if (isset($downloads)): ?>
         <h1>Downloads</h1>
         <?php print render($downloads); ?>
       <?php endif; ?>
       <h1>Hot topics</h1>
       <?php print $hot_topics_menu; ?>
-      <?php if ($page['sidebar']): ?>
+      <?php if (isset($page['sidebar'])): ?>
         <?php print render($page['sidebar']) ?>
       <?php endif; ?>
     </aside>
 
-    <?php if ($node): ?>
-      <?php if ($tabs): ?><div class="tabs g9"><?php print render($tabs); ?></div><?php endif; ?>
+    <?php if (isset($node)): ?>
+      <?php if (isset($tabs)): ?><div class="tabs g9"><?php print render($tabs); ?></div><?php endif; ?>
       <?php print render($page['help']); ?>
-      <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+      <?php if (isset($action_links)): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
       <?php print render($page['content']); ?>
     <?php else: ?>
       <article class="g9">
         <header>
           <?php print render($title_prefix); ?>
-          <?php if ($title): ?><h1><?php print $title; ?></h1><?php endif; ?>
+          <?php if (isset($title)): ?><h1><?php print $title; ?></h1><?php endif; ?>
           <?php print render($title_suffix); ?>
         </header>
-        <?php if ($tabs): ?><div class="tabs g9"><?php print render($tabs); ?></div><?php endif; ?>
+        <?php if (isset($tabs)): ?><div class="tabs g9"><?php print render($tabs); ?></div><?php endif; ?>
         <?php print render($page['help']); ?>
-        <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+        <?php if (isset($action_links)): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
         <?php print render($page['content']); ?>
       </article>
     <?php endif; ?>
