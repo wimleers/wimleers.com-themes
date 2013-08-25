@@ -184,7 +184,7 @@
         Logo: <a href="http://inespee.com">Ine Spee</a>.
         Design: <a href="http://xavierbertels.com">Xavier Bertels</a>.
         Made in <a href="http://en.wikipedia.org/wiki/Hasselt">Hasselt</a>.<br />
-        Copyright 2007&ndash;2012 <a href="http://wimleers.com">Wim Leers</a>. All rights reserved.
+        Copyright 2007&ndash;2013 <a href="http://wimleers.com">Wim Leers</a>. All rights reserved.
       </p>
     </div>
     <nav class="g6">
