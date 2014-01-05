@@ -99,7 +99,7 @@ function wimleers_v2_preprocess_page(&$variables) {
   if (isset($node->taxonomy_vocabulary_1)) {
     $variables['tags'] = field_view_field('node', $node, 'taxonomy_vocabulary_1');
   }
-  if (isset($node->upload)) {
+  if (!empty($node->upload)) {
     $variables['downloads'] = field_view_field('node', $node, 'upload');
   }
 
