@@ -559,8 +559,7 @@ th {
         color: #15324E;
         border-color: #225270; }
       .siteHead nav ul li a:active {
-        border: none;
-        margin: 1px 0 -1px; }
+        border: none; }
     .siteHead nav ul li.active {
       background: #217db7; }
       .siteHead nav ul li.active a {
@@ -756,8 +755,6 @@ section.main {
     section.main aside ul.topics li a:focus {
       border-color: #2385c2; }
     section.main aside ul.topics li a:active {
-      position: relative;
-      top: 1px;
       border: none;
       color: #c24523; }
     section.main aside ul.files .filesize {
@@ -818,8 +815,6 @@ section.main {
   border-color: #2385c2; }
 .body a:active {
   color: #c24523;
-  position: relative;
-  top: 1px;
   border: 0; }
 .body a[rel="footnote"] {
   border: none;
@@ -1044,8 +1039,6 @@ section.writings {
     color: #2385c2;
     border-color: #2385c2; }
   .front .intro a:active {
-    position: relative;
-    top: 1px;
     border: none;
     color: #c24523; }
 .front .body {
@@ -1074,8 +1067,6 @@ section.writings {
     color: #A7D9FF;
     border-color: #9accec; }
   .siteFoot a:active {
-    position: relative;
-    top: 1px;
     border: none; }
   .siteFoot nav {
     position: relative; }
