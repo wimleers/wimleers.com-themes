@@ -196,14 +196,7 @@ function wimleers_v2_breadcrumb($variables) {
       $breadcrumb[] = l('Demos', 'demo');
     }
 
-    // Secondly: add the title of the current page to the breadcrumb.
-    $title = drupal_get_title();
-    if (drupal_strlen($title) > 25) {
-      $title = drupal_substr($title, 0, 25) . '…';
-    }
-    $breadcrumb[] = $title;
-
-    if (empty($breadcrumb)) {
+    if (empty($breadcrumb) || count($breadcrumb) == 1) {
       return '';
     }
 
@@ -211,7 +204,7 @@ function wimleers_v2_breadcrumb($variables) {
     // screen-reader users. Make the heading invisible with .element-invisible.
     $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
 
-    $output .= '<div class="breadcrumb">/ ' . implode(' / ', $breadcrumb) . '</div>';
+    $output .= '<div class="breadcrumb">/ ' . implode(' / ', $breadcrumb) . ' /</div>';
     return $output;
   }
 }
