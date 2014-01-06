@@ -1132,3 +1132,13 @@ section.writings {
     .siteFoot form .inputSubmit:active {
       box-shadow: inset 0 2px 4px 1px rgba(0, 0, 0, 0.33);
       background-color: #4b9acc; }
+
+/**
+ * Additions/overrides for drupalstuff.scss.
+ */
+.field-label-inline .field-label,
+.field-label-inline .field-items {
+  display: inline; }
+
+.field {
+  margin-top: 1em; }

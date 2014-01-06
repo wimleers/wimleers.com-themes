@@ -1105,3 +1105,16 @@ section.writings
 		}
 	}
 }
+
+/**
+ * Additions/overrides for drupalstuff.scss.
+ */
+
+.field-label-inline .field-label,
+.field-label-inline .field-items {
+	display: inline;
+}
+
+.field {
+	margin-top: 1em;
+}
