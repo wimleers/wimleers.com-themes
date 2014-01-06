@@ -8,6 +8,6 @@
 
 <ul class="files">
 <?php foreach ($items as $delta => $item) : ?>
-    <li><?php print render($item); ?> <span class="filesize">(<?php print format_size($item['#file']->filesize); ?>)</span></li>
+    <li><?php print render($item); ?></li>
 <?php endforeach; ?>
 </ul>
