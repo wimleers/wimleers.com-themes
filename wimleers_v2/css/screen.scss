@@ -916,9 +916,13 @@ section.writings
 		}
 	}
 
-	.date
+	.permalink
 	{
 		float: right;
+
+		a {
+			border-bottom: none;
+		}
 	}
 
 	.links

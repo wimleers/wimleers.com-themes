@@ -71,8 +71,15 @@ function wimleers_v2_preprocess_comment(&$variables) {
   $variables['manual_subject'] = ($node->nid > 112) ? FALSE : TRUE;
 
   $uri = entity_uri('comment', $comment);
-  $uri['options'] += array('attributes' => array('class' => 'permalink', 'rel' => 'bookmark'));
-  $variables['permalink'] = l($variables['created'], $uri['path'], $uri['options']);
+
+  $uri['options'] += array(
+    'attributes' => array(
+      'class' => 'permalink',
+      'rel' => 'bookmark',
+      'title' => t('Posted on !date', array('!date' => format_date($comment->created, 'custom', 'j M Y — H:i:s (T)'))),
+    ),
+  );
+  $variables['permalink'] = l('∞', $uri['path'], $uri['options']);
 }
 
 function wimleers_v2_preprocess_page(&$variables) {

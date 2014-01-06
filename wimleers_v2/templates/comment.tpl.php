@@ -70,7 +70,7 @@
 
   <div class="meta">
 	<span class="author"><?php print $author; ?></span>
-	<span class="date"><?php print $permalink ?></span>
+	<span class="permalink"><?php print $permalink ?></span>
   </div>
 
   <div class="body"<?php print $content_attributes; ?>>
