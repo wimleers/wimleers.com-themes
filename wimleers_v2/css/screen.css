@@ -648,7 +648,7 @@ section.main {
       color: #9B2B0C; }
   section.main h2,
   section.main h3 {
-    padding: 21px 0;
+    padding: 35px 0 14px 0;
     font: 20px/21px "Qlassik Medium", sans-serif; }
   section.main h3 {
     padding: 7px 0;
@@ -790,67 +790,71 @@ section.main {
       padding: 4px 0;
       color: #858381; }
 
-.body p,
-.body ul,
-.body ol,
-.body pre,
-.body dl {
-  padding-bottom: 14px; }
-.body li,
-.body dd {
-  padding-bottom: 7px; }
-.body dt {
-  font-weight: 700; }
-.body ul ul,
-.body ol ol {
-  padding-left: 1em; }
-.body hr {
-  border: none;
-  height: 1px;
-  background: #DAD7D3;
-  margin-bottom: 13px; }
-.body a:hover,
-.body a:focus {
-  color: #14699e;
-  border-color: #2385c2; }
-.body a:active {
-  color: #c24523;
-  border: 0; }
-.body a[rel="footnote"] {
-  border: none;
-  color: #A99;
-  display: inline-block;
-  font: 700 9px/10px Verdana, sans-serif;
-  padding: 1px 3px 2px;
-  position: relative;
-  top: -6px;
-  left: 1px;
-  border-radius: 10px; }
-.body a[rel="footnote"]:hover,
-.body a[rel="footnote"]:focus {
-  background: #2385c2;
-  color: #fff; }
-.body a[rel="footnote"]:active {
-  background: #c24523;
-  color: #fff; }
-.body a[rel="original-image"] {
-  display: inline-block;
-  border: 3px solid #fff;
-  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.33);
-  -webkit-transition: all .3s ease-out;
-  -moz-transition: all .3s ease-out;
-  -ie-transition: all .3s ease-out;
-  -o-transition: all .3s ease-out;
-  transition: all .3s ease-out; }
-  .body a[rel="original-image"] img {
-    display: block; }
-  .body a[rel="original-image"]:hover {
-    -webkit-transform: rotate(2deg) scale(1.05);
-    -moz-transform: rotate(2deg) scale(1.05);
-    -ie-transform: rotate(2deg) scale(1.05);
-    -o-transform: rotate(2deg) scale(1.05);
-    transform: rotate(2deg) scale(1.05);
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.28); }
+.body {
+  /* Provide some additional spacing above the first paragraph. */ }
+  .body p,
+  .body ul,
+  .body ol,
+  .body pre,
+  .body dl {
+    padding-bottom: 14px; }
+  .body p:first-of-type {
+    padding-top: 14px; }
+  .body li,
+  .body dd {
+    padding-bottom: 7px; }
+  .body dt {
+    font-weight: 700; }
+  .body ul ul,
+  .body ol ol {
+    padding-left: 1em; }
+  .body hr {
+    border: none;
+    height: 1px;
+    background: #DAD7D3;
+    margin-bottom: 13px; }
+  .body a:hover,
+  .body a:focus {
+    color: #14699e;
+    border-color: #2385c2; }
+  .body a:active {
+    color: #c24523;
+    border: 0; }
+  .body a[rel="footnote"] {
+    border: none;
+    color: #A99;
+    display: inline-block;
+    font: 700 9px/10px Verdana, sans-serif;
+    padding: 1px 3px 2px;
+    position: relative;
+    top: -6px;
+    left: 1px;
+    border-radius: 10px; }
+  .body a[rel="footnote"]:hover,
+  .body a[rel="footnote"]:focus {
+    background: #2385c2;
+    color: #fff; }
+  .body a[rel="footnote"]:active {
+    background: #c24523;
+    color: #fff; }
+  .body a[rel="original-image"] {
+    display: inline-block;
+    border: 3px solid #fff;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.33);
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ie-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out; }
+    .body a[rel="original-image"] img {
+      display: block; }
+    .body a[rel="original-image"]:hover {
+      -webkit-transform: rotate(2deg) scale(1.05);
+      -moz-transform: rotate(2deg) scale(1.05);
+      -ie-transform: rotate(2deg) scale(1.05);
+      -o-transform: rotate(2deg) scale(1.05);
+      transform: rotate(2deg) scale(1.05);
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.28); }
 
 .comment-form ul ul,
 .comment-form ol ol {

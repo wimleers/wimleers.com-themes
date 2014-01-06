@@ -329,7 +329,7 @@ section.main
 	h2,
 	h3
 	{
-		padding: 21px 0;
+		padding: 35px 0 14px 0;
 		font: 20px/21px "Qlassik Medium", sans-serif;
 	}
 
@@ -582,6 +582,9 @@ section.main
 		ol,
 		pre,
 		dl { padding-bottom: 14px; }
+
+		/* Provide some additional spacing above the first paragraph. */
+		p:first-of-type { padding-top: 14px; }
 
 		li,
 		dd { padding-bottom: 7px; }
