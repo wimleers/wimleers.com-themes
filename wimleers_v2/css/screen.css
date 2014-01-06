@@ -583,6 +583,8 @@ section.main {
   /*
   	Typographic Defaults
   */
+  /* Bend the rules a little bit: allow the title to slightly exceed its grid
+     column. */
   /*
   	Search
   */ }
@@ -641,6 +643,9 @@ section.main {
   section.main form .description {
     padding-top: 7px;
     font-size: 11px; }
+  section.main h1 {
+    position: relative;
+    width: 120%; }
   section.main h1 a {
     color: #c24523;
     border: none; }
@@ -697,11 +702,16 @@ section.main {
       color: #a8a8a8;
       border-bottom: 1px solid #ccc; }
   section.main aside ul {
-    list-style: none; }
+    list-style: none;
+    /* Bend the rules a little bit: allow the tags to slightly exceed their
+       grid column. */ }
     section.main aside ul a {
       font: 700 11px/20px Verdana, sans-serif;
       text-transform: uppercase;
       letter-spacing: 1px; }
+    section.main aside ul.tags {
+      position: relative;
+      width: 120%; }
     section.main aside ul.tags li {
       display: inline-block;
       margin: 0 7px 7px 0; }

@@ -315,6 +315,13 @@ section.main
 		Typographic Defaults
 	*/
 
+	/* Bend the rules a little bit: allow the title to slightly exceed its grid
+	   column. */
+	h1 {
+		position: relative;
+		width: 120%;
+	}
+
 	h1 a
 	{
 		color: #c24523;
@@ -419,6 +426,13 @@ section.main
 				font: 700 11px/20px Verdana, sans-serif;
 				text-transform: uppercase;
 				letter-spacing: 1px;
+			}
+
+			/* Bend the rules a little bit: allow the tags to slightly exceed their
+			   grid column. */
+			&.tags {
+				position: relative;
+				width: 120%;
 			}
 
 			&.tags li
