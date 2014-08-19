@@ -47,6 +47,7 @@
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <meta name="author" content="Wim Leers">
+  <meta name="viewport" content="initial-scale=1.0">
   <?php print $styles; ?>
   <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>

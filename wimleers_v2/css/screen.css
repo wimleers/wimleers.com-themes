@@ -450,8 +450,11 @@ body {
   font: 14px/21px Verdana, sans-serif;
   color: #404050;
   background: #faf7f2;
-  min-width: 960px;
   -webkit-text-size-adjust: 100%; }
+
+@media all and (min-width: 961px) {
+  body {
+    min-width: 960px; } }
 
 h1 {
   font: 400 26px/28px "Qlassik Medium", sans-serif;
@@ -1096,3 +1099,176 @@ section.writings {
 
 .field {
   margin-top: 1em; }
+
+@media all and (max-width: 960px) {
+  .siteHead .logo {
+    padding-top: 8px;
+    padding-bottom: 20px; }
+  .siteHead .c16 {
+    width: 100%; }
+    .siteHead .c16 .g9 {
+      clear: left;
+      width: 98%; }
+  .siteHead nav ul {
+    margin-top: -11px; }
+  section.main {
+    width: 100%; }
+  section.main article.node {
+    width: 90%;
+    margin: 0 auto;
+    display: table;
+    float: none;
+    padding: 0;
+    max-width: 37em; }
+    section.main article.node h1 {
+      width: 100%; }
+  .body li {
+    margin-left: 0.5em; }
+  body.page-node section.main aside.g4 {
+    width: 90%;
+    margin: 0 auto;
+    display: table;
+    float: none;
+    padding: 0;
+    max-width: 37em;
+    padding-bottom: 30px; }
+    body.page-node section.main aside.g4 h1:first-child {
+      display: inline-block;
+      float: left;
+      width: auto;
+      margin: 0 10px 0 0; }
+    body.page-node section.main aside.g4 ul.tags {
+      display: inline-block;
+      float: left;
+      width: auto; }
+    body.page-node section.main aside.g4 h1, body.page-node section.main aside.g4 .files, body.page-node section.main aside.g4 .block {
+      display: none; }
+  body.page-node.node-type-page section.main aside.g4, body.page-contact section.main aside.g4, body.page-comment section.main aside.g4 {
+    display: none; }
+  section.main .topics {
+    display: none; }
+  body.page-contact section.main > aside {
+    display: none; }
+  body.page-contact section.main > article {
+    width: 95%;
+    margin: 0 auto;
+    display: table;
+    float: none;
+    padding: 0; }
+  .siteFoot {
+    font-size: 11px; }
+    .siteFoot .c16 {
+      width: 95%; }
+      .siteFoot .c16 .g10, .siteFoot .c16 .g6 {
+        display: block;
+        width: 100%;
+        float: none;
+        margin: 0; }
+      .siteFoot .c16 .g6 {
+        margin-top: 80px; } }
+
+@media all and (max-width: 580px) {
+  body.page-comment section.main > article.g9, body.page-contact section.main > article.g9 {
+    width: 100%;
+    margin: 0 auto;
+    display: table;
+    float: none;
+    padding: 0; }
+    body.page-comment section.main > article.g9 > header h1, body.page-contact section.main > article.g9 > header h1 {
+      width: 90%;
+      margin: 0 auto; }
+  body.page-comment section.main form, body.page-contact section.main form {
+    width: 95%;
+    margin: 0 auto;
+    display: table;
+    float: none;
+    padding: 0; }
+    body.page-comment section.main form input, body.page-comment section.main form textarea, body.page-contact section.main form input, body.page-contact section.main form textarea {
+      width: 95%; } }
+
+@media all and (max-width: 700px) {
+  .front .intro {
+    width: 80%;
+    margin: 0 auto;
+    display: table;
+    float: none;
+    padding: 0;
+    font-size: 15px;
+    padding-bottom: 21px; }
+  section.writings .g10 {
+    width: 96%;
+    margin: 0 auto;
+    display: table;
+    float: none;
+    padding: 0; }
+    section.writings .g10 .view-writings article {
+      padding-bottom: 0; }
+      section.writings .g10 .view-writings article .meta {
+        width: 20px;
+        padding-bottom: 0;
+        position: relative; }
+        section.writings .g10 .view-writings article .meta .y {
+          display: none; }
+        section.writings .g10 .view-writings article .meta .tag {
+          width: 100px;
+          position: absolute;
+          top: -10px; }
+      section.writings .g10 .view-writings article a.omega {
+        width: 85%; }
+        section.writings .g10 .view-writings article a.omega h2 {
+          font-size: 22px; }
+        section.writings .g10 .view-writings article a.omega p {
+          display: none; }
+  .comment {
+    padding-top: 10px; }
+    .comment .user-picture {
+      margin: 0 10px 0 -10px; }
+    .comment .meta {
+      padding-bottom: 0; } }
+
+@media all and (max-width: 460px) {
+  .siteHead .g9 {
+    margin-left: 4px;
+    margin-right: 0px; }
+  .siteHead nav ul li {
+    margin-right: 4px;
+    padding: 13px 4px 13px; }
+    .siteHead nav ul li a {
+      font: 700 7px/14px Verdana, sans-serif; }
+  .siteHead nav ul .meta li:last-child {
+    margin-right: 0px; }
+  html body.page-node section.main {
+    padding-top: 21px; }
+    html body.page-node section.main aside.g4 {
+      padding: 0;
+      width: 160%;
+      -webkit-transform: scale(0.65);
+      -webkit-transform-origin: 10% 0%; }
+  section.main article.node {
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto; }
+    section.main article.node img, section.main article.node video {
+      width: 100%; }
+    section.main article.node blockquote {
+      padding: 0 25px 0; } }
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+  .siteFoot {
+    padding-bottom: 0; }
+    .siteFoot nav:after {
+      background-size: 89px, 88px;
+      position: relative;
+      width: 89px;
+      height: 88px;
+      top: -100px;
+      right: 20px;
+      float: right; }
+    .siteFoot .c16 .g6 {
+      margin-top: 50px; }
+  section.main article.node .comment .user-picture img {
+    width: 25px;
+    height: 25px; } }

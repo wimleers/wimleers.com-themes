@@ -1,0 +1,259 @@
+@mixin reset-from-grid-and-center($width) {
+    width: $width;
+    margin: 0 auto;
+    display: table;
+    float: none;
+    padding: 0;
+}
+
+@mixin fit() {
+  -ms-word-break: break-all;
+     word-break: break-all;
+
+     // Non standard for webkit
+     word-break: break-word;
+
+-webkit-hyphens: auto;
+   -moz-hyphens: auto;
+        hyphens: auto;
+}
+
+@media all and (max-width: 960px) {
+  // Fit header (and especially the menu) on narrow viewports.
+  .siteHead {
+    .logo {
+      padding-top: 8px;
+      padding-bottom: 20px;
+    }
+
+    .c16 {
+      width: 100%;
+      .g9 {
+        clear: left;
+        width: 98%;
+      }
+    }
+    nav ul {
+      margin-top: -11px;
+    }
+  }
+
+  section.main {
+    width: 100%;
+  }
+
+  // Fit writings on narrow viewports.
+  section.main article.node {
+    @include reset-from-grid-and-center(90%);
+    max-width: 37em;
+
+    h1 {
+      width: 100%;
+    }
+  }
+
+  // Adjust the position of <li>s in writings, to better fit narrow viewports.
+  .body li {
+    margin-left: .5em;
+  }
+
+  // Fit the asides for writings on narrow viewports.
+  body.page-node section.main aside.g4 {
+    @include reset-from-grid-and-center(90%);
+    max-width: 37em;
+    padding-bottom: 30px;
+    h1:first-child {
+      display: inline-block;
+      float: left;
+      width: auto;
+      margin: 0 10px 0 0;
+    }
+    ul.tags {
+      display: inline-block;
+      float: left;
+      width: auto;
+    }
+    h1, .files, .block {
+      display: none
+    }
+  }
+
+  // No aside on static page nodes or the contact page.
+  body.page-node.node-type-page, body.page-contact, body.page-comment {
+    section.main aside.g4 {
+      display: none;
+    }
+  }
+
+  // Never show "Hot topics" on narrow viewports.
+  section.main .topics {
+    display: none;
+  }
+
+  // Don't show any aside on the contact page.
+  body.page-contact section.main {
+    > aside {
+      display: none;
+    }
+    > article {
+      @include reset-from-grid-and-center(95%);
+    }
+  }
+
+  // Fit the footer.
+  .siteFoot {
+    font-size: 11px;
+    .c16 {
+      width: 95%;
+      .g10, .g6 {
+        display: block;
+        width: 100%;
+        float: none;
+        margin: 0;
+      }
+      .g6 {
+        margin-top: 80px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 580px) {
+  // When commenting, fit the form and the thing being commented on.
+  // When contacting, fit the form.
+  body.page-comment, body.page-contact {
+    section.main {
+      > article.g9 {
+        @include reset-from-grid-and-center(100%);
+        > header h1 {
+          width: 90%;
+          margin: 0 auto;
+        }
+      }
+      form {
+        @include reset-from-grid-and-center(95%);
+        input, textarea {
+          width: 95%;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 700px) {
+ // Fit the intro on the front page.
+  .front .intro {
+    @include reset-from-grid-and-center(80%);
+    font-size: 15px;
+    padding-bottom: 21px;
+  }
+
+  section.writings .g10 {
+    @include reset-from-grid-and-center(96%);
+    .view-writings {
+      article {
+        padding-bottom: 0;
+        .meta {
+          width: 20px;
+          padding-bottom: 0;
+          position: relative;
+          .y {
+            display: none;
+          }
+          .tag {
+            width: 100px;
+            position: absolute;
+            top: -10px;
+          }
+        }
+        a.omega {
+          width: 85%;
+          h2 {
+            font-size: 22px;
+          }
+          p {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  // Fit the comments.
+  .comment {
+    padding-top: 10px;
+    .user-picture {
+      margin: 0 10px 0 -10px;
+    }
+    .meta {
+      padding-bottom: 0;
+    }
+  }
+}
+
+@media all and (max-width: 460px) {
+  // On the *narrowest* screens, reduce the size of the menu links.
+  .siteHead {
+    .g9 {
+      margin-left: 4px;
+      margin-right: 0px;
+    }
+    nav ul li {
+      margin-right: 4px;
+      padding: 13px 4px 13px;
+      a {
+        font: 700 7px/14px Verdana, sans-serif
+      }
+    }
+    nav ul .meta li:last-child {
+      margin-right: 0px;
+    }
+  }
+
+  // Fit the tags.
+  html body.page-node section.main {
+    padding-top: 21px;
+    aside.g4 {
+      padding: 0;
+      width: 160%;
+      -webkit-transform: scale(0.65);
+      -webkit-transform-origin: 10% 0%;
+    }
+  }
+
+  // Fit the writings, by resizing images (which are always 420px).
+  section.main article.node {
+    @include fit();
+    img, video {
+      width: 100%;
+    }
+    blockquote {
+      padding: 0 25px 0;
+    }
+  }
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+  // Adjust the footer; make the llama image work well on HiDPI screens.
+  .siteFoot {
+    padding-bottom: 0;
+    nav:after {
+      background-size: 89px, 88px;
+      position: relative;
+      width: 89px;
+      height: 88px;
+      top: -100px;
+      right: 20px;
+      float: right;
+    }
+    .c16 .g6 {
+      margin-top: 50px;
+    }
+  }
+
+  // Make the comment user pictures work well on HiDPI screens.
+  section.main article.node .comment .user-picture img {
+    width: 25px;
+    height: 25px;
+  }
+}
