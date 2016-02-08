@@ -183,8 +183,8 @@
       <p>
         Logo: <a href="http://inespee.com">Ine Spee</a>.
         Design: <a href="http://xavierbertels.com">Xavier Bertels</a>.
-        Made in <a href="http://en.wikipedia.org/wiki/Hasselt">Hasselt</a>.<br />
-        Copyright 2007&ndash;2015 <a href="http://wimleers.com">Wim Leers</a>. All rights reserved.
+        <br>
+        © 2007–2016 Wim Leers
       </p>
     </div>
     <nav class="g6">
