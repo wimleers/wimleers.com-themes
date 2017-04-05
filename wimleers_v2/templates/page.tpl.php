@@ -181,10 +181,8 @@
     <div class="g10">
       <?php print render($builtin_search); ?>
       <p>
-        Logo: <a href="http://inespee.com">Ine Spee</a>.
-        Design: <a href="http://xavierbertels.com">Xavier Bertels</a>.
-        <br>
-        © 2007–2016 Wim Leers
+        Logo by <a href="http://inespee.com">Ine Spee</a>.
+        Design by <a href="https://xavierbertels.com">Xavier Bertels</a>.
       </p>
     </div>
     <nav class="g6">
@@ -192,8 +190,7 @@
         <li><a href="https://twitter.com/wimleers" rel="me">Twitter</a></li>
         <li><a href="https://linkedin.com/in/wimleers" rel="me">LinkedIn</a></li>
         <li><a href="https://github.com/wimleers" rel="me">Github</a></li>
-        <li><a href="https://drupal.org/user/99777" rel="me">Drupal.org</a></li>
-        <li><a href="https://pinboard.in/u:wimleers/" rel="me">Pinboard</a></li>
+        <li><a href="https://www.drupal.org/u/wim-leers" rel="me">Drupal.org</a></li>
       </ul>
     </nav>
   </div>
