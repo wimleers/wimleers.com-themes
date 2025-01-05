@@ -1,0 +1,72 @@
+/* 1. The one thing I really dislike about Olivero: the captions — their readability is poor IMHO. */
+figcaption {
+  background-color: var(--color--gray-90);
+  font-size: var(--font-size-base);
+  font-style: normal;
+}
+
+/* 2. wimleers.com v2-style rendering of "Tags" taxonomy terms. */
+.field--tags__items {
+  /* Olivero override: 0 -> .3em */
+  padding-inline-start: .3em;
+}
+.field--tags__item:nth-last-child(n + 2)::after {
+  /* Olivero override: spaces, not commas between tags. */
+  content: "\00a0";
+}
+.node--view-mode-full .field--tags {
+  /* Undo Olivero's styling completely. */
+  margin: unset;
+  padding: unset;
+  background-color: unset;
+  /* And apply the same bottom margin to this last field as for all those before it. */
+  margin-block-end: var(--sp2);
+}
+.field--tags__item {
+  display: inline-block;
+  margin: 0 7px 7px 0;
+  a {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: var(--font-size-s);
+    float: left;
+    height: 20px;
+    margin-bottom: 1px;
+    position: relative;
+    background: #c2c2c2;
+    color: #faf7f2;
+    margin-right: 5px;
+    padding: 0 10px 0 10px;
+    border-radius: 2px 0 0 2px;
+    border: none;
+    &::before {
+      content: "";
+      float: right;
+      position: absolute;
+      top: 0;
+      right: -10px;
+      width: 0;
+      height: 0;
+      border-color: transparent transparent transparent #c2c2c2;
+      border-style: solid;
+      border-width: 10px 0 10px 10px;
+   }
+   &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      right: 0;
+      float: left;
+      width: 4px;
+      height: 4px;
+      border-radius: 2px;
+      background: #faf7f2;
+    }
+    &:hover, &:focus {
+      background: #aaa;
+      &::before {
+        border-color: transparent transparent transparent #aaa;
+      }
+    }
+  }
+}

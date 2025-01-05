@@ -3,8 +3,8 @@ type: theme
 description: wimleers.com v3, an Olivero subtheme
 core_version_requirement: ^10
 base theme: olivero
-# libraries:
-#   - fluffiness/global-styling
+libraries:
+ - wimleers_v3/global-styling
 regions:
   header: Header
   primary_menu: Primary menu

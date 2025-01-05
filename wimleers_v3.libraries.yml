@@ -1,0 +1,9 @@
+global-styling:
+  version: ^3
+  css:
+    theme:
+      distinctive.css: {}
+      custom.css: {}
+  js: {}
+  dependencies:
+    - olivero/global-styling
